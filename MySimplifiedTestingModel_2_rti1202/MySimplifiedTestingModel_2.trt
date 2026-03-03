@@ -1,0 +1,1875 @@
+-- ****************************************************************************
+--
+--  Trace file: MySimplifiedTestingModel_2.trc
+--
+--  RTI1202 23.1 (02-May-2023)
+--  Thu Feb 19 09:49:32 2026
+--
+--  Copyright 2026, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 0
+--    TRCGenerateLabels             = 0
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 3
+
+-- ******** Keywords **********************************************************
+-- _application "MySimplifiedTestingModel_2.map"
+
+_genname     "RTI"
+_genversion  "23.1"
+_gendate     "02/19/2026 09:49:43"
+_description ""
+_author      "RTI1202 23.1 (02-May-2023)"
+_model       "MySimplifiedTestingModel_2"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       0.001
+  alias:       "HostService"
+  increment:   0.001
+  unit:        "s"
+}
+
+
+
+
+-- Type definitions for arrays
+typedef MySimplifiedTestingModel_2_ArrayDT5_1_8_Col col uint(16)[1][8]
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_127_Col col uint(8)[1][127]
+typedef MySimplifiedTestingModel_2_ArrayDT3_127 uint(8)[127]
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_64_Col col uint(8)[1][64]
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_2_Col col uint(8)[1][2]
+typedef MySimplifiedTestingModel_2_ArrayDT8_8 uint(8)[8]
+typedef MySimplifiedTestingModel_2_ArrayDT3_256 uint(8)[256]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  READONLY
+ unit:  "s"
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 RUN=2"
+ unit:  "-"
+}
+
+p_msg_last_error_no
+{
+ type:  uint(32)*
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: READONLY
+}
+
+p_dsts_sum_of_reset_time
+{
+ type:  flt(64,IEEE)*
+ alias: "sumOfResetTime"
+ desc:  "Internal variable for summing up reset time."
+ unit:  "s"
+ flags: READONLY|HIDDEN
+}
+
+
+-- ******** Task Information variables ****************************************
+group "Task Info"
+{
+ 
+}
+  group "Timer Task 1"
+  {
+   
+  }
+
+  pRti_TIMERA_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: READONLY
+  }
+  pRti_TIMERA_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: READONLY
+  }
+  pRti_TIMERA_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: READONLY
+  }
+  pRti_TIMERA_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: READONLY
+  }
+  pRti_TIMERA_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: READONLY
+  }
+  pRti_TIMERA_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: READONLY
+  }
+  pRti_TIMERA_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: READONLY
+  }
+  pRti_TIMERA_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: READONLY
+  }
+  pRti_TIMERA_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: READONLY
+  }
+  endgroup
+
+
+endgroup
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+  
+  
+	group "RS485" -- subsystem-group
+
+		-- Skipping output FU bereit1
+		-- Skipping output FU relative Ausgangsfrequenz1
+
+
+		group "Clock" -- block-group
+		{
+		 block: "Clock"
+		}
+			p_0_MySimplifiedTestingModel_2_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Clock"
+
+		group "Active" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Active"
+
+		group "Constant1" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant1"
+
+		group "Constant10" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[23]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant10"
+
+		group "Constant11" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[15]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant11"
+
+		group "Constant12" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant12"
+
+		group "Constant13" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[18]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant13"
+
+		group "Constant14" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[19]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant14"
+
+		group "Constant15" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[11]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant15"
+
+		group "Constant16" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant16"
+
+		group "Constant19" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_uint32_T_2[1]
+			{
+			 type:    uint(32)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant19"
+
+		group "Constant5" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[22]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant5"
+
+		group "Constant6" -- block-group
+		{
+		 block: "Constant"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[454]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[12]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant6"
+
+		group "Constant7" -- block-group
+		{
+		 block: "Constant"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[455]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[13]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant7"
+
+		group "Constant8" -- block-group
+		{
+		 block: "Constant"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[456]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[14]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant8"
+
+		group "ConstantSwitch10" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[13]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "ConstantSwitch10"
+
+		group "ConstantSwitch11" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[14]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "ConstantSwitch11"
+
+		group "ConstantSwitch2" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[24]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "ConstantSwitch2"
+
+		group "ConstantSwitch7" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "ConstantSwitch7"
+
+		group "ConstantSwitch8" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[11]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "ConstantSwitch8"
+
+		group "ConstantSwitch9" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[12]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "ConstantSwitch9"
+
+		group "Invalid CTW" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Invalid CTW"
+
+		group "Length" -- block-group
+		{
+		 block: "Constant"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[457]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[15]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Length"
+
+		group "RX on" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "RX on"
+
+		group "Setpoint" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Setpoint"
+
+		group "TX on" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_MySimplifiedTestingModel_2_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "TX on"
+
+		group "Cast" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[256]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast"
+
+		group "Cast To Boolean" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[3]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean"
+
+		group "Cast To Boolean1" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean1"
+
+		group "Cast To Boolean2" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[32]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean2"
+
+		group "Cast To Boolean3" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[33]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean3"
+
+		group "Cast To Boolean4" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[34]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean4"
+
+		group "Cast To Boolean5" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[4]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean5"
+
+		group "Cast To Boolean6" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[30]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean6"
+
+		group "Cast To Boolean7" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[31]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Cast To Boolean7"
+
+		group "Display" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[36]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display"
+
+		group "Display1" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[37]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display1"
+
+		group "Display16" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[42]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display16"
+
+		group "Display17" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[43]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display17"
+
+		group "Display18" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1039]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display18"
+
+		group "Display19" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1040]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display19"
+
+		group "Display20" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1168]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display20"
+
+		group "Display21" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[657]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display21"
+
+		group "Display22" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[911]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display22"
+
+		group "Display23" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1038]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display23"
+
+		group "Display24" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[41]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display24"
+
+		group "Display25" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[389]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display25"
+
+		group "Display26" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[39]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display26"
+
+		group "Display27" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[40]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display27"
+
+		group "Display28" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display28"
+
+		group "Display29" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint16_T_3[8]
+			{
+			 type:    uint(16)*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display29"
+
+		group "Display30" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint16_T_3[0]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT5_1_8_Col*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display30"
+
+		group "Display31" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[589]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_2_Col*
+			 alias:   "In1"
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display31"
+
+		group "Display9" -- block-group
+		{
+		 block: "Display"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[38]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   READONLY
+			}
+
+
+
+		endgroup -- block-group "Display9"
+
+		group "Memory" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_boolean_T_3[0]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory"
+
+		group "Memory1" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_boolean_T_3[1]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory1"
+
+		group "Memory10" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[258]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[5]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory10"
+
+		group "Memory2" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[127]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[2]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory2"
+
+		group "Memory3" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[0]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[1]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory3"
+
+		group "Memory4" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[128]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[3]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory4"
+
+		group "Memory5" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[29]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_boolean_T_3[2]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory5"
+
+		group "Memory6" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[260]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[7]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory6"
+
+		group "Memory7" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[387]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[8]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory7"
+
+		group "Memory8" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[257]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[4]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory8"
+
+		group "Memory9" -- block-group
+		{
+		 block: "Memory"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[259]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[6]
+			{
+			 type:    uint(8)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory9"
+
+		group "Begrenzung Arbeitstemperatur1" -- block-group
+		{
+		 block: "Saturate"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[388]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[9]
+			{
+			 type:    uint(8)*
+			 alias:   "UpperLimit"
+			 flags:   PARAM
+			}
+			p_1_MySimplifiedTestingModel_2_uint8_T_4[10]
+			{
+			 type:    uint(8)*
+			 alias:   "LowerLimit"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Begrenzung Arbeitstemperatur1"
+
+		group "Begrenzung Arbeitstemperatur3" -- block-group
+		{
+		 block: "Saturate"
+		}
+			p_0_MySimplifiedTestingModel_2_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_real_T_0[16]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "UpperLimit"
+			 flags:   PARAM
+			}
+			p_1_MySimplifiedTestingModel_2_real_T_0[17]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "LowerLimit"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Begrenzung Arbeitstemperatur3"
+
+		group "Saturation" -- block-group
+		{
+		 block: "Saturate"
+		}
+			p_0_MySimplifiedTestingModel_2_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "UpperLimit"
+			 flags:   PARAM
+			}
+			p_1_MySimplifiedTestingModel_2_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "LowerLimit"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Saturation"
+
+		group "Switch" -- block-group
+		{
+		 block: "Switch"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[389]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_real_T_0[20]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Threshold"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Switch"
+
+		group "Switch1" -- block-group
+		{
+		 block: "Switch"
+		}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[453]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_MySimplifiedTestingModel_2_real_T_0[21]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Threshold"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Switch1"
+
+  
+  
+		group "DS1202SER_RX_C2" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[129]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_127*
+			 alias:   "RXBytes"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint32_T_1[0]
+			{
+			 type:    uint(32)*
+			 alias:   "NumRXBytes"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_int32_T_2[0]
+			{
+			 type:    int(32)*
+			 alias:   "Status"
+			 desc:    "No data (unused channel) "
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "DS1202SER_RX_C2"
+  
+  
+		group "DS1202SER_SETUP_C1" -- subsystem-group
+
+
+		endgroup -- subsystem-group "DS1202SER_SETUP_C1"
+  
+  
+		group "DS1202SER_SETUP_C2" -- subsystem-group
+
+
+		endgroup -- subsystem-group "DS1202SER_SETUP_C2"
+  
+  
+		group "DS1202SER_STAT_C1" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[5]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT8_8*
+			 alias:   "Line"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[13]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT8_8*
+			 alias:   "Modem"
+			 desc:    "No data (unused channel) "
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[21]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT8_8*
+			 alias:   "Interrupt"
+			 desc:    "No data (unused channel) "
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "DS1202SER_STAT_C1"
+  
+  
+		group "Subsystem" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_int32_T_2[1]
+			{
+			 type:    int(32)*
+			 alias:   "Status"
+			 desc:    "No data (unused channel) "
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "Cast" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				p_0_MySimplifiedTestingModel_2_uint32_T_1[1]
+				{
+				 type:    uint(32)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Cast"
+
+			group "Reshape" -- block-group
+			{
+			 block: "Reshape"
+			}
+				p_0_MySimplifiedTestingModel_2_uint32_T_1[2]
+				{
+				 type:    uint(32)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Reshape"
+
+  
+  
+			group "DS1202SER_TX_C1" -- subsystem-group
+
+				p_0_MySimplifiedTestingModel_2_int32_T_2[1]
+				{
+				 type:    int(32)*
+				 alias:   "Status"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+				}
+
+			endgroup -- subsystem-group "DS1202SER_TX_C1"
+
+
+		endgroup -- subsystem-group "Subsystem"
+  
+  
+		group "BUS MASTER FSM" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[911]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "TX_Data"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1038]
+			{
+			 type:    uint(8)*
+			 alias:   "TX_Len"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[41]
+			{
+			 type:    uint(8)*
+			 alias:   "TX_Trigger"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[42]
+			{
+			 type:    uint(8)*
+			 alias:   "grant_ZKDM"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1039]
+			{
+			 type:    uint(8)*
+			 alias:   "resp_err_ZKDM"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[43]
+			{
+			 type:    uint(8)*
+			 alias:   "resp_ok_ZKDM"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1040]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "resp_data"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1167]
+			{
+			 type:    uint(8)*
+			 alias:   "resp_err_THERMO"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[1168]
+			{
+			 type:    uint(8)*
+			 alias:   "resp_len"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[44]
+			{
+			 type:    uint(8)*
+			 alias:   "grant_THERMO"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[45]
+			{
+			 type:    uint(8)*
+			 alias:   "resp_ok_THERMO"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+
+
+		endgroup -- subsystem-group "BUS MASTER FSM"
+  
+  
+		group "Create 8-Bytes Command" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[657]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "command"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint16_T_3[8]
+			{
+			 type:    uint(16)*
+			 alias:   "pcd2"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+
+
+		endgroup -- subsystem-group "Create 8-Bytes Command"
+  
+  
+		group "MATLAB Function" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[655]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_2_Col*
+			 alias:   "y"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+
+
+		endgroup -- subsystem-group "MATLAB Function"
+  
+  
+		group "MATLAB Function4" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[591]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+			 alias:   "u"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+
+
+		endgroup -- subsystem-group "MATLAB Function4"
+  
+  
+		group "ZKDM FSM" -- subsystem-group
+
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[35]
+			{
+			 type:    uint(8)*
+			 alias:   "req_valid"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[458]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+			 alias:   "req_bytes"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[585]
+			{
+			 type:    uint(8)*
+			 alias:   "req_len"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[586]
+			{
+			 type:    uint(8)*
+			 alias:   "expect_addr_ZKDM"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[587]
+			{
+			 type:    uint(8)*
+			 alias:   "expect_crc_kind_ZKDM"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[588]
+			{
+			 type:    uint(8)*
+			 alias:   "expect_len_ZKDM"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[36]
+			{
+			 type:    uint(8)*
+			 alias:   "fault_no_trip"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[37]
+			{
+			 type:    uint(8)*
+			 alias:   "fault_trip"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[38]
+			{
+			 type:    uint(8)*
+			 alias:   "fu_ctrl_ready"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[39]
+			{
+			 type:    uint(8)*
+			 alias:   "fu_ready"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_boolean_T_5[40]
+			{
+			 type:    uint(8)*
+			 alias:   "bus_ctrl_active"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "freq_rel"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint16_T_3[0]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT5_1_8_Col*
+			 alias:   "debug_command"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_MySimplifiedTestingModel_2_uint8_T_4[589]
+			{
+			 type:    MySimplifiedTestingModel_2_ArrayDT3_1_2_Col*
+			 alias:   "debug_pcd2"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+
+
+		endgroup -- subsystem-group "ZKDM FSM"
+
+
+	endgroup -- subsystem-group "RS485"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+group "State Machine Data"
+
+
+
+endgroup
+
+
+-- ******** Labels ************************************************************
+
+-- Generation of labels turned off with TRCGenerateLabels option.
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file MySimplifiedTestingModel_2_usr.trc found.
+
+-- RTI_USR_TRC_END
+
+-- ******** EESPort States Variables ******************************************
+group "XIL API"
+{ 
+  
+}
+
+  group "EESPort"
+  {  
+    
+  }
+
+    p_xilapi_eesport_activeerrorset_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Active ErrorSet"
+      desc:    "Index of active ErrorSet or 0 if no ErrorSet is active."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    p_xilapi_eesport_erroractivated_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Activated"
+      desc:    "0 - no error is activated on hardware, 1 - at least one error is activated on hardware."  
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+    }
+
+    p_xilapi_eesport_errorswitching_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Switching"
+      desc:    "0 - no switching operation running on hardware, 1 -  switching operation running on hardware."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+    }
+
+    xilapi_eesport_flags_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Flags"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    xilapi_eesport_trigger_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Trigger"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    endgroup -- "EESPort"
+
+endgroup -- "XILAPI"
+
+
+
+-- ******** [EOF] *************************************************************
+

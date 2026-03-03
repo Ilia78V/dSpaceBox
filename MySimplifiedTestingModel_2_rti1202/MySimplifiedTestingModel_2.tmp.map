@@ -1,0 +1,743 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtversion.a(RtVersion.o)
+                              (--whole-archive)
+C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+                              (--whole-archive)
+C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(w_pow.o)
+                              C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librt1202.so (pow)
+C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+                              C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(w_pow.o) (__ieee754_pow)
+C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(s_scalbn.o)
+                              C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o) (scalbn)
+
+As-needed library included to satisfy reference by file (symbol)
+
+libDsRealTimeTestingRP.so.1   rti_sim_engine.o07 (dsrtt_script_service_pre_computation)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+LOAD C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crti.o
+LOAD c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+                0x0000000000000000                _DSPACE_START = 0x0
+                0x0000000000000000                _DSPACE_START_ = 0x0
+                0x00000000000004b2                DS_TARGET_PLATFORM = 0x4b2
+START GROUP
+LOAD MySimplifiedTestingModel_2.o07
+LOAD MySimplifiedTestingModel_2_data.o07
+LOAD MySimplifiedTestingModel_2_trc_ptr.o07
+LOAD rtGetInf.o07
+LOAD rtGetNaN.o07
+LOAD rt_nonfinite.o07
+LOAD rti_sim_engine.o07
+LOAD rti_init_c.o07
+LOAD rt_sim.o07
+LOAD rti_assert.o07
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtcan.so
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtj1939.so
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtser.so
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librt13xxio.so
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librt1202.so
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtwrap.so
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtversion.a
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a
+END GROUP
+LOAD C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libstdc++.so
+LOAD C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/libm.so
+LOAD c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0\libgcc.a
+LOAD C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/libc.so
+LOAD C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib\libc.a
+LOAD c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0\libgcc.a
+LOAD c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+LOAD C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crtn.o
+                [!provide]                        PROVIDE (__stack, 0x0)
+                [!provide]                        PROVIDE (___stack, 0x0)
+                [!provide]                        PROVIDE (__executable_start, 0x48040000)
+                0x0000000048040134                . = (0x48040000 + SIZEOF_HEADERS)
+
+.interp         0x0000000048040134       0x14
+ *(.interp)
+ .interp        0x0000000048040134       0x14 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.note           0x0000000048040150       0x18
+ .note          0x0000000048040150       0x18 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crtn.o
+
+.note.gnu.build-id
+                0x0000000048040168       0x20
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000048040168       0x20 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.hash           0x0000000048040188      0x27c
+ *(.hash)
+ .hash          0x0000000048040188      0x27c C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x0000000048040404      0x5a0
+ *(.dynsym)
+ .dynsym        0x0000000048040404      0x5a0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.dynstr         0x00000000480409a4      0x6be
+ *(.dynstr)
+ .dynstr        0x00000000480409a4      0x6be C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.gnu.version    0x0000000048041062        0x0
+ *(.gnu.version)
+ .gnu.version   0x0000000048041062        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.gnu.version_d  0x0000000048041064        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000048041064        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.gnu.version_r  0x0000000048041064        0x0
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000048041064        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.rel.dyn
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.dyn       0x0000000048041064       0x6c
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ .rela.text     0x0000000048041064        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ .rela.rodata   0x0000000048041064        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ .rela.got      0x0000000048041064       0x48 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ *(.rela.got1)
+ *(.rela.got2)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ .rela.sbss     0x00000000480410ac        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ .rela.bss      0x00000000480410ac       0x24 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ .rela.iplt     0x00000000480410d0        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt       0x00000000480410d0      0x354
+ *(.rela.plt)
+ .rela.plt      0x00000000480410d0      0x354 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.init           0x0000000048041424       0x24
+ *(.init)
+ .init          0x0000000048041424        0xc C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crti.o
+                0x0000000048041424                _init
+ .init          0x0000000048041430        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ .init          0x0000000048041434        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+ .init          0x0000000048041438       0x10 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crtn.o
+
+.text           0x0000000048041450     0x439c
+                0x0000000048041450                _btext = .
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000048041450      0x118 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+                0x0000000048041450                _start
+ .text          0x0000000048041568        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crti.o
+ .text          0x0000000048041568      0x2b0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ *fill*         0x0000000048041818        0x8 00000000
+ .text          0x0000000048041820     0x2570 MySimplifiedTestingModel_2.o07
+                0x0000000048041c50                rt_roundd_snf
+                0x0000000048041cb0                MySimplifiedTestingModel_2_output
+                0x0000000048043770                MySimplifiedTestingModel_2_update
+                0x0000000048043a80                MySimplifiedTestingModel_2_initialize
+                0x0000000048043d40                MySimplifiedTestingModel_2_terminate
+ .text          0x0000000048043d90        0x0 MySimplifiedTestingModel_2_data.o07
+ .text          0x0000000048043d90      0x134 MySimplifiedTestingModel_2_trc_ptr.o07
+                0x0000000048043e90                MySimplifiedTestingModel_2_rti_init_trc_pointers
+ *fill*         0x0000000048043ec4        0xc 00000000
+ .text          0x0000000048043ed0       0x5c rtGetInf.o07
+                0x0000000048043ed0                rtGetInf
+                0x0000000048043ef0                rtGetInfF
+                0x0000000048043f00                rtGetMinusInf
+                0x0000000048043f20                rtGetMinusInfF
+ *fill*         0x0000000048043f2c        0x4 00000000
+ .text          0x0000000048043f30       0x3c rtGetNaN.o07
+                0x0000000048043f30                rtGetNaN
+                0x0000000048043f60                rtGetNaNF
+ *fill*         0x0000000048043f6c        0x4 00000000
+ .text          0x0000000048043f70      0x158 rt_nonfinite.o07
+                0x0000000048043f70                rt_InitInfAndNaN
+                0x0000000048043fd0                rtIsInf
+                0x0000000048044000                rtIsInfF
+                0x0000000048044030                rtIsNaN
+                0x0000000048044080                rtIsNaNF
+ *fill*         0x00000000480440c8        0x8 00000000
+ .text          0x00000000480440d0      0x424 rti_sim_engine.o07
+                0x0000000048044480                rtk_idle_function
+                0x0000000048044490                rti_th_timertask1_trigger_source
+                0x00000000480444e0                initConditions
+                0x00000000480444f0                initVariables
+ *fill*         0x00000000480444f4        0xc 00000000
+ .text.startup  0x0000000048044500      0x6e0 rti_sim_engine.o07
+                0x0000000048044500                main
+ .text          0x0000000048044be0       0x40 rti_init_c.o07
+                0x0000000048044be0                rti_init
+ .text          0x0000000048044c20       0x44 rt_sim.o07
+                0x0000000048044c20                rt_SimInitTimingEngine
+                0x0000000048044c50                rt_SimGetNextSampleHit
+                0x0000000048044c60                rt_SimUpdateDiscreteTaskSampleHits
+ *fill*         0x0000000048044c64        0xc 00000000
+ .text          0x0000000048044c70       0xd4 rti_assert.o07
+                0x0000000048044c70                rti_assertion_handler
+                0x0000000048044d00                rti_assertion_mode_msg
+ .text          0x0000000048044d44        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtversion.a(RtVersion.o)
+ *fill*         0x0000000048044d44        0xc 00000000
+ .text          0x0000000048044d50        0x4 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+                0x0000000048044d50                DsEesPort_init()
+ .text          0x0000000048044d54       0x20 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(w_pow.o)
+                0x0000000048044d54                pow
+ .text          0x0000000048044d74      0x85c C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+                0x0000000048044d74                __ieee754_pow
+ .text          0x00000000480455d0      0x188 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(s_scalbn.o)
+                0x00000000480455d0                scalbn
+ .text          0x0000000048045758       0x94 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+ .text          0x00000000480457ec        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crtn.o
+ *(.gnu.warning)
+ *(.glink)
+ .glink         0x00000000480457ec        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.fini           0x00000000480457ec       0x20
+ *(.fini)
+ .fini          0x00000000480457ec        0xc C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crti.o
+                0x00000000480457ec                _fini
+ .fini          0x00000000480457f8        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ .fini          0x00000000480457fc       0x10 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crtn.o
+                [!provide]                        PROVIDE (__etext, .)
+                0x000000004804580c                PROVIDE (_etext, .)
+                [!provide]                        PROVIDE (etext, .)
+
+.rodata         0x0000000048045810      0x610
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000048045810       0xe4 MySimplifiedTestingModel_2.o07
+                0x00000000480458f0                MySimplifiedTestingModel_2_M
+ .rodata.cst4   0x00000000480458f4       0x30 MySimplifiedTestingModel_2.o07
+ *fill*         0x0000000048045924        0x4 
+ .rodata.cst8   0x0000000048045928       0x10 MySimplifiedTestingModel_2.o07
+ .rodata.str1.4
+                0x0000000048045938       0x12 MySimplifiedTestingModel_2.o07
+ *fill*         0x000000004804594a        0x2 
+ .rodata.cst4   0x000000004804594c        0x8 rtGetInf.o07
+ .rodata.cst4   0x0000000048045954        0x4 rtGetNaN.o07
+ .rodata        0x0000000048045958        0xc rti_sim_engine.o07
+                0x0000000048045958                rtiDataSetStorageEnabled
+                0x000000004804595c                p_dsts_sum_of_reset_time
+                0x0000000048045960                p_msg_last_error_no
+ .rodata.cst4   0x0000000048045964        0x4 rti_sim_engine.o07
+ .rodata.cst8   0x0000000048045964        0x8 rti_sim_engine.o07
+ .rodata.str1.4
+                0x0000000048045964      0x284 rti_sim_engine.o07
+ .rodata.cst4   0x0000000048045be8        0x4 rt_sim.o07
+                                          0x8 (size before relaxing)
+ .rodata.str1.4
+                0x0000000048045bec       0x71 rt_sim.o07
+ *fill*         0x0000000048045c5d        0x3 
+ .rodata.str1.4
+                0x0000000048045c60       0x70 rti_assert.o07
+                                         0x6d (size before relaxing)
+ .rodata        0x0000000048045cd0       0x30 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+ .rodata.cst4   0x0000000048045d00        0x8 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+ .rodata.cst8   0x0000000048045d08       0xe8 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+ .rodata.cst8   0x0000000048045df0       0x30 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(s_scalbn.o)
+
+.rodata1
+ *(.rodata1)
+
+.sdata2         0x0000000048045e20        0x0
+                0x0000000000008000                PROVIDE (_SDA2_BASE_, 0x8000)
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+ .sdata2        0x0000000048045e20        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr   0x0000000048045e20       0x14
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000048045e20       0x14 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+
+.eh_frame       0x0000000048045e34       0x2c
+ *(.eh_frame)
+ .eh_frame      0x0000000048045e34        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ .eh_frame      0x0000000048045e34        0x0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ .eh_frame      0x0000000048045e34       0x28 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+ .eh_frame      0x0000000048045e5c        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x0000000048045e60                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x0000000048046e60                . = DATA_SEGMENT_ALIGN (0x1000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000048046e60        0x0
+                0x0000000048046e60                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x0000000048046e60                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000048046e60        0x0
+                0x0000000048046e60                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x0000000048046e60                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000048046e60        0x0
+                0x0000000048046e60                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x0000000048046e60                PROVIDE (__fini_array_end, .)
+
+.ctors          0x0000000048046e60        0x8
+ *crtbegin.o(.ctors)
+ .ctors         0x0000000048046e60        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x0000000048046e64        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+
+.dtors          0x0000000048046e68        0x8
+ *crtbegin.o(.dtors)
+ .dtors         0x0000000048046e68        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x0000000048046e6c        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+                0x0000000048046e6c                __DTOR_END__
+
+.jcr            0x0000000048046e70        0x4
+ *(.jcr)
+ .jcr           0x0000000048046e70        0x0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ .jcr           0x0000000048046e70        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.fixup
+ *(.fixup)
+
+.got1
+ *(.got1)
+
+.got2
+ *(.got2)
+
+.dynamic        0x0000000048046e74      0x100
+ *(.dynamic)
+ .dynamic       0x0000000048046e74      0x100 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+                0x0000000048046e74                _DYNAMIC
+
+.got
+ *(.got)
+                0x0000000048046f74                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.plt
+ *(.plt)
+
+.data           0x0000000048046f78      0x110
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000048046f78        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ .data          0x0000000048046f78        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crti.o
+ .data          0x0000000048046f78        0x0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ .data.rel.local
+                0x0000000048046f78        0x4 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+                0x0000000048046f78                __dso_handle
+ .data          0x0000000048046f7c        0x0 MySimplifiedTestingModel_2.o07
+ *fill*         0x0000000048046f7c        0x4 
+ .data          0x0000000048046f80       0xe8 MySimplifiedTestingModel_2_data.o07
+                0x0000000048046f80                MySimplifiedTestingModel_2_P
+ .data          0x0000000048047068        0x0 MySimplifiedTestingModel_2_trc_ptr.o07
+ .data          0x0000000048047068        0x0 rtGetInf.o07
+ .data          0x0000000048047068        0x0 rtGetNaN.o07
+ .data          0x0000000048047068        0x0 rt_nonfinite.o07
+ .data          0x0000000048047068       0x14 rti_sim_engine.o07
+                0x0000000048047068                simState
+                0x0000000048047078                lastSimState
+ .data          0x000000004804707c        0x0 rti_init_c.o07
+ .data          0x000000004804707c        0x0 rt_sim.o07
+ .data          0x000000004804707c        0x0 rti_assert.o07
+ .data          0x000000004804707c        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtversion.a(RtVersion.o)
+ .data          0x000000004804707c        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+ .data.rel      0x000000004804707c        0xc C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+                0x000000004804707c                p_xilapi_eesport_errorswitching_uint32_T
+                0x0000000048047080                p_xilapi_eesport_erroractivated_uint32_T
+                0x0000000048047084                p_xilapi_eesport_activeerrorset_uint32_T
+ .data          0x0000000048047088        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(w_pow.o)
+ .data          0x0000000048047088        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+ .data          0x0000000048047088        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(s_scalbn.o)
+ .data          0x0000000048047088        0x0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+ .data          0x0000000048047088        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crtn.o
+
+.tm_clone_table
+                0x0000000048047088        0x0
+ .tm_clone_table
+                0x0000000048047088        0x0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ .tm_clone_table
+                0x0000000048047088        0x0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+
+.data1
+ *(.data1)
+
+.got            0x0000000048047088       0x54
+ *(.got)
+ .got           0x0000000048047088       0x54 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+                0x00000000480470d0                _GLOBAL_OFFSET_TABLE_
+
+.sdata          0x00000000480470dc        0x0
+                0x0000000000008000                PROVIDE (_SDA_BASE_, 0x8000)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00000000480470dc        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+                0x00000000480470dc                _edata = .
+                [!provide]                        PROVIDE (edata, .)
+                0x00000000480470dc                __bss_start = .
+
+.sbss           0x00000000480470dc        0x0
+                [!provide]                        PROVIDE (__sbss_start, .)
+                [!provide]                        PROVIDE (___sbss_start, .)
+ *(.dynsbss)
+ .dynsbss       0x00000000480470dc        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end, .)
+                [!provide]                        PROVIDE (___sbss_end, .)
+
+.plt            0x00000000480470dc      0x39c
+ *(.plt)
+ .plt           0x00000000480470dc      0x39c C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+                0x0000000048047124                ts_reset
+                0x000000004804712c                __register_frame_info
+                0x0000000048047134                msg_error_clear
+                0x000000004804713c                dsrtt_set_current_time
+                0x0000000048047144                sqrt
+                0x000000004804714c                rtk_current_task_absolute_time_ptr_get
+                0x0000000048047154                DsTimeSync_simstateRun
+                0x000000004804715c                floor
+                0x0000000048047164                __floatundidf
+                0x000000004804716c                rtk_setup_temp_overrun_handling
+                0x0000000048047174                ceil
+                0x000000004804717c                SrtkIntBase_requestTaskMode
+                0x0000000048047184                rtk_reset_tasks
+                0x000000004804718c                __cxa_finalize
+                0x0000000048047194                _init_array
+                0x000000004804719c                rtk_set_task_type
+                0x00000000480471a4                DsTimeSync_baserate
+                0x00000000480471ac                rtk_task_name_set
+                0x00000000480471b4                dsrtt_script_service_post_computation
+                0x00000000480471bc                rtk_create_task
+                0x00000000480471c4                msg_warning_printf
+                0x00000000480471cc                msg_last_error_number
+                0x00000000480471d4                dsser_transmit
+                0x00000000480471dc                dsparam_copy_data_set
+                0x00000000480471e4                SrtkPreload_preloadRegion
+                0x00000000480471ec                msg_error_set
+                0x00000000480471f4                rtk_enable_services
+                0x00000000480471fc                SrtkDaq_Init
+                0x0000000048047204                rtk_task_task_calls_get
+                0x000000004804720c                dsser_config
+                0x0000000048047214                SrtkCfg_finalizeSlaveBoot
+                0x000000004804721c                DsTimeSync_setCurrentTimePtr
+                0x0000000048047224                SrtkIntBase_enableIntGlobal
+                0x000000004804722c                rtk_overrun_flag_clear
+                0x0000000048047234                dsser_enable
+                0x000000004804723c                rtk_bind_interrupt
+                0x0000000048047244                _init_libc
+                0x000000004804724c                dsrtt_init
+                0x0000000048047254                msg_info_set
+                0x000000004804725c                dsser_disable
+                0x0000000048047264                dsser_status_read
+                0x000000004804726c                dsrtt_script_service_pre_computation
+                0x0000000048047274                msg_error_printf
+                0x000000004804727c                memset
+                0x0000000048047284                rtk_leave_idle_mode
+                0x000000004804728c                __wrap_exit
+                0x0000000048047294                __wrap_atexit
+                0x000000004804729c                dsser_receive_fifo_level
+                0x00000000480472a4                _fini_array
+                0x00000000480472ac                SrtkDaq_Background
+                0x00000000480472b4                _preinit_array
+                0x00000000480472bc                SrtkApp_init
+                0x00000000480472c4                dsser_transmit_fifo_level
+                0x00000000480472cc                SrtkDaq_Service
+                0x00000000480472d4                rtk_task_task_name_get
+                0x00000000480472dc                SrtkSim_notifyStateTransition
+                0x00000000480472e4                msg_set
+                0x00000000480472ec                rtk_get_subentry
+                0x00000000480472f4                dsrtt_set_step_size
+                0x00000000480472fc                rtk_enter_idle_mode
+                0x0000000048047304                dsser_init
+                0x000000004804730c                rtk_initialize
+                0x0000000048047314                dsser_receive
+                0x000000004804731c                SrtkApp_background
+                0x0000000048047324                rtk_default_overrun_fcn
+                0x000000004804732c                vcm_module_register
+                0x0000000048047334                DsTimeSync_simstateStop
+                0x000000004804733c                SrtkIntBase_disableIntGlobal
+                0x0000000048047344                SrtkSim_registerState
+                0x000000004804734c                __deregister_frame_info
+                0x0000000048047354                dsser_fifo_reset
+
+.bss            0x0000000048047478      0xa7c
+ *(.dynbss)
+ .dynbss        0x0000000048047478       0x14 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+                0x0000000048047478                errno
+                0x0000000048047480                dsts_sum_of_reseted_time
+                0x0000000048047488                msg_last_error_no
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000004804748c        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+ .bss           0x000000004804748c        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crti.o
+ .bss           0x000000004804748c       0x20 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+ *fill*         0x00000000480474ac        0x4 
+ .bss           0x00000000480474b0      0x979 MySimplifiedTestingModel_2.o07
+                0x00000000480474b0                MySimplifiedTestingModel_2_B
+                0x00000000480479b8                MySimplifiedTestingModel_2_DW
+                0x0000000048047e28                MySimplifiedTestingMode_PrevZCX
+ .bss           0x0000000048047e29        0x0 MySimplifiedTestingModel_2_data.o07
+ *fill*         0x0000000048047e29        0x3 
+ .bss           0x0000000048047e2c       0x38 MySimplifiedTestingModel_2_trc_ptr.o07
+                0x0000000048047e2c                p_0_MySimplifiedTestingModel_2_real_T_0
+                0x0000000048047e30                p_0_MySimplifiedTestingModel_2_uint32_T_1
+                0x0000000048047e34                p_0_MySimplifiedTestingModel_2_int32_T_2
+                0x0000000048047e38                p_0_MySimplifiedTestingModel_2_uint16_T_3
+                0x0000000048047e3c                p_0_MySimplifiedTestingModel_2_uint8_T_4
+                0x0000000048047e40                p_0_MySimplifiedTestingModel_2_boolean_T_5
+                0x0000000048047e44                p_1_MySimplifiedTestingModel_2_real_T_0
+                0x0000000048047e48                p_1_MySimplifiedTestingModel_2_int32_T_1
+                0x0000000048047e4c                p_1_MySimplifiedTestingModel_2_uint32_T_2
+                0x0000000048047e50                p_1_MySimplifiedTestingModel_2_boolean_T_3
+                0x0000000048047e54                p_1_MySimplifiedTestingModel_2_uint8_T_4
+                0x0000000048047e58                p_2_MySimplifiedTestingModel_2_uint16_T_0
+                0x0000000048047e5c                p_2_MySimplifiedTestingModel_2_uint8_T_1
+                0x0000000048047e60                p_2_MySimplifiedTestingModel_2_boolean_T_2
+ .bss           0x0000000048047e64        0x0 rtGetInf.o07
+ .bss           0x0000000048047e64        0x0 rtGetNaN.o07
+ *fill*         0x0000000048047e64        0x4 
+ .bss           0x0000000048047e68       0x2c rt_nonfinite.o07
+                0x0000000048047e68                rtNaN
+                0x0000000048047e70                rtNaNF
+                0x0000000048047e78                rtInf
+                0x0000000048047e80                rtInfF
+                0x0000000048047e88                rtMinusInf
+                0x0000000048047e90                rtMinusInfF
+ *fill*         0x0000000048047e94        0x4 
+ .bss           0x0000000048047e98       0x44 rti_sim_engine.o07
+                0x0000000048047e98                currentTime
+                0x0000000048047e9c                finalTime
+                0x0000000048047ea0                modelStepSize
+                0x0000000048047ea8                rtiDS1202SER_B1_Ser
+                0x0000000048047eb0                taskMode
+                0x0000000048047eb4                pRti_TIMERA_STime
+                0x0000000048047eb8                pRti_TIMERA_TTime
+                0x0000000048047ebc                pRti_TIMERA_TState
+                0x0000000048047ec0                pRti_TIMERA_OType
+                0x0000000048047ec4                pRti_TIMERA_OMax
+                0x0000000048047ec8                pRti_TIMERA_ORpt
+                0x0000000048047ecc                pRti_TIMERA_OCnt
+                0x0000000048047ed0                pRti_TIMERA_TCnt
+                0x0000000048047ed4                pRti_TIMERA_Prio
+                0x0000000048047ed8                rtiAssertionMode
+ .bss           0x0000000048047edc        0x4 rti_init_c.o07
+ .bss           0x0000000048047ee0        0x0 rt_sim.o07
+ .bss           0x0000000048047ee0        0x0 rti_assert.o07
+ .bss           0x0000000048047ee0        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtversion.a(RtVersion.o)
+ .bss           0x0000000048047ee0       0x14 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+                0x0000000048047ee0                xilapi_eesport_trigger_uint32_T
+                0x0000000048047ee4                xilapi_eesport_flags_uint32_T
+                0x0000000048047ee8                xilapi_eesport_errorswitching_uint32_T
+                0x0000000048047eec                xilapi_eesport_erroractivated_uint32_T
+                0x0000000048047ef0                xilapi_eesport_activeerrorset_uint32_T
+ .bss           0x0000000048047ef4        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(w_pow.o)
+ .bss           0x0000000048047ef4        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+ .bss           0x0000000048047ef4        0x0 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(s_scalbn.o)
+ .bss           0x0000000048047ef4        0x0 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+ .bss           0x0000000048047ef4        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crtn.o
+ *(COMMON)
+                0x0000000048047ef4                . = ALIGN ((. != 0x0)?0x4:0x1)
+
+.iplt           0x0000000048047f00        0x0
+ .iplt          0x0000000048047f00        0x0 C:\ProgramData\dSPACE\8FB0EFA7-ABB4-4AA6-86AA-BC02D02B0030\Compiler\QNX650_520\target\qnx6/ppcbe/lib/crt1.o
+                0x0000000048047f00                . = ALIGN (0x4)
+                0x0000000048047f00                . = ALIGN (0x4)
+                0x0000000048047f00                __end = .
+                0x0000000048047f00                _end = .
+                [!provide]                        PROVIDE (end, .)
+                0x0000000048047f00                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x47
+ *(.comment)
+ .comment       0x0000000000000000       0x11 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtbegin.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 MySimplifiedTestingModel_2.o07
+ .comment       0x0000000000000011       0x12 MySimplifiedTestingModel_2_data.o07
+ .comment       0x0000000000000011       0x12 MySimplifiedTestingModel_2_trc_ptr.o07
+ .comment       0x0000000000000011       0x12 rtGetInf.o07
+ .comment       0x0000000000000011       0x12 rtGetNaN.o07
+ .comment       0x0000000000000011       0x12 rt_nonfinite.o07
+ .comment       0x0000000000000011       0x12 rti_sim_engine.o07
+ .comment       0x0000000000000011       0x12 rti_init_c.o07
+ .comment       0x0000000000000011       0x12 rt_sim.o07
+ .comment       0x0000000000000011       0x12 rti_assert.o07
+ .comment       0x0000000000000011       0x12 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtversion.a(RtVersion.o)
+ .comment       0x0000000000000011       0x12 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/librtglobals.a(DsEESPort.o)
+ .comment       0x0000000000000011       0x12 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(w_pow.o)
+ .comment       0x0000000000000023       0x12 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+ .comment       0x0000000000000035       0x12 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(s_scalbn.o)
+ .comment       0x0000000000000047       0x12 c:/programdata/dspace/8fb0efa7-abb4-4aa6-86aa-bc02d02b0030/compiler/qnx650_520/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/5.2.0/crtend.o
+
+.PPC.EMB.apuinfo
+                0x0000000000000000       0x18
+ .PPC.EMB.apuinfo
+                0x0000000000000000       0x18 MySimplifiedTestingModel_2.o07
+ .PPC.EMB.apuinfo
+                0x0000000000000018       0x18 rt_nonfinite.o07
+ .PPC.EMB.apuinfo
+                0x0000000000000030       0x18 rti_sim_engine.o07
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+                0x0000000000000000       0x14
+ *(.gnu.attributes)
+ .gnu.attributes
+                0x0000000000000000       0x10 MySimplifiedTestingModel_2.o07
+ .gnu.attributes
+                0x0000000000000010       0x10 rtGetInf.o07
+ .gnu.attributes
+                0x0000000000000020       0x10 rtGetNaN.o07
+ .gnu.attributes
+                0x0000000000000030       0x10 rt_nonfinite.o07
+ .gnu.attributes
+                0x0000000000000040       0x10 rti_sim_engine.o07
+ .gnu.attributes
+                0x0000000000000050       0x10 rt_sim.o07
+ .gnu.attributes
+                0x0000000000000060       0x10 rti_assert.o07
+ .gnu.attributes
+                0x0000000000000070       0x14 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(w_pow.o)
+ .gnu.attributes
+                0x0000000000000084       0x14 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(e_pow.o)
+ .gnu.attributes
+                0x0000000000000098       0x14 C:\Program Files\dSPACE RCPHIL 2023-A\DS1202\Lib/libm_fastpow.a(s_scalbn.o)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(MySimplifiedTestingModel_2.ppc elf32-powerpc)

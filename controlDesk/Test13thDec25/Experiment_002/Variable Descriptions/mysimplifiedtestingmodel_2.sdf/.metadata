@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VariableDescriptionMetaData SchemaVersion="1">
+  <SerializedFileName>mysimplifiedtestingmodel_2.vdp</SerializedFileName>
+  <IsActive>true</IsActive>
+  <FileName>mysimplifiedtestingmodel_2.sdf</FileName>
+  <VariableDescriptionSourcePathAndFileName>..\..\mysimplifiedtestingmodel_2.sdf</VariableDescriptionSourcePathAndFileName>
+  <ImportOptions>
+    <DisableLookupDetection>false</DisableLookupDetection>
+    <MeasurementArrayOmitThreshold>200000</MeasurementArrayOmitThreshold>
+    <ValueBlockOmitThreshold>200000</ValueBlockOmitThreshold>
+  </ImportOptions>
+</VariableDescriptionMetaData>

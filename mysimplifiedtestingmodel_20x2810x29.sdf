@@ -1,0 +1,15 @@
+[System]
+Version=2.2
+SystemType=SingleProcessorSystem
+DAQService=DsDAQ
+DsDAQBackground=1
+Status=Start
+File=mysimplifiedtestingmodel_20x2810x29.rta
+RTP=Master
+
+[Master]
+Type=DS1202
+State=Enabled
+ServiceID=1
+TraceFile=mysimplifiedtestingmodel_20x2810x29.trc
+ID=b63eb6e5-d3dc-4cfa-9905-148bd45b1d79
