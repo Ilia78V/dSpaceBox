@@ -7,9 +7,9 @@
  *
  * Code generation for model "MySimplifiedTestingModel_2".
  *
- * Model version              : 1.99
+ * Model version              : 1.104
  * Simulink Coder version : 9.9 (R2023a) 19-Nov-2022
- * C source code generated on : Thu Feb 19 09:49:32 2026
+ * C source code generated on : Mon Mar  9 09:58:22 2026
  *
  * Target selection: rti1202.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -52,25 +52,20 @@ P_MySimplifiedTestingModel_2_T MySimplifiedTestingModel_2_P = {
    */
   0.0,
 
-  /* Expression: sfpt(1).BytesRefNumOf
-   * Referenced by: '<S5>/S-Function1'
+  /* Expression: 34
+   * Referenced by: '<S1>/ConstantSwitch12'
    */
-  1.0,
+  34.0,
 
   /* Expression: 1
-   * Referenced by: '<S1>/TX on'
+   * Referenced by: '<S1>/Constant10'
    */
   1.0,
 
-  /* Expression: 0
-   * Referenced by: '<S1>/RX on'
+  /* Expression: 2
+   * Referenced by: '<S1>/Constant'
    */
-  0.0,
-
-  /* Expression: 1
-   * Referenced by: '<S1>/Constant1'
-   */
-  1.0,
+  2.0,
 
   /* Expression: 1
    * Referenced by: '<S1>/ConstantSwitch7'
@@ -117,43 +112,68 @@ P_MySimplifiedTestingModel_2_T MySimplifiedTestingModel_2_P = {
    */
   125.0,
 
+  /* Expression: 8
+   * Referenced by: '<S1>/Constant12'
+   */
+  8.0,
+
+  /* Expression: 1
+   * Referenced by: '<S1>/Invalid CTW1'
+   */
+  1.0,
+
+  /* Expression: 10
+   * Referenced by: '<S1>/ConstantSwitch13'
+   */
+  10.0,
+
   /* Expression: 0
-   * Referenced by: '<S1>/Constant14'
+   * Referenced by: '<S1>/ConstantSwitch14'
    */
   0.0,
 
+  /* Expression: 1
+   * Referenced by: '<S1>/TX on'
+   */
+  1.0,
+
   /* Expression: 0
-   * Referenced by: '<S1>/Switch'
+   * Referenced by: '<S1>/RX on'
    */
   0.0,
 
-  /* Expression: 0
-   * Referenced by: '<S1>/Switch1'
+  /* Expression: 1
+   * Referenced by: '<S1>/Constant1'
    */
-  0.0,
+  1.0,
+
+  /* Expression: sfpt(1).BytesRefNumOf
+   * Referenced by: '<S5>/S-Function1'
+   */
+  1.0,
 
   /* Expression: 0
    * Referenced by: '<S1>/Constant5'
    */
   0.0,
 
-  /* Expression: 1
-   * Referenced by: '<S1>/Constant10'
-   */
-  1.0,
-
   /* Expression: 0
    * Referenced by: '<S1>/ConstantSwitch2'
    */
   0.0,
 
+  /* Expression: 0
+   * Referenced by: '<S1>/Memory20'
+   */
+  0.0,
+
   /* Computed Parameter: Status_Y0
-   * Referenced by: '<S11>/Status'
+   * Referenced by: '<S12>/Status'
    */
   0,
 
   /* Expression: sfpt(1).BytesRefNumOf
-   * Referenced by: '<S13>/S-Function1'
+   * Referenced by: '<S15>/S-Function1'
    */
   32U,
 
@@ -177,10 +197,20 @@ P_MySimplifiedTestingModel_2_T MySimplifiedTestingModel_2_P = {
    */
   false,
 
-  /* Computed Parameter: Constant12_Value
-   * Referenced by: '<S1>/Constant12'
+  /* Computed Parameter: Memory16_InitialCondition
+   * Referenced by: '<S1>/Memory16'
    */
-  8U,
+  false,
+
+  /* Computed Parameter: Memory11_InitialCondition
+   * Referenced by: '<S1>/Memory11'
+   */
+  false,
+
+  /* Computed Parameter: Memory12_InitialCondition
+   * Referenced by: '<S1>/Memory12'
+   */
+  false,
 
   /* Computed Parameter: Memory3_InitialCondition
    * Referenced by: '<S1>/Memory3'
@@ -197,8 +227,33 @@ P_MySimplifiedTestingModel_2_T MySimplifiedTestingModel_2_P = {
    */
   0U,
 
+  /* Computed Parameter: Constant15_Value
+   * Referenced by: '<S1>/Constant15'
+   */
+  0U,
+
+  /* Computed Parameter: Memory17_InitialCondition
+   * Referenced by: '<S1>/Memory17'
+   */
+  0U,
+
   /* Computed Parameter: Memory8_InitialCondition
    * Referenced by: '<S1>/Memory8'
+   */
+  0U,
+
+  /* Computed Parameter: Memory13_InitialCondition
+   * Referenced by: '<S1>/Memory13'
+   */
+  0U,
+
+  /* Computed Parameter: Memory14_InitialCondition
+   * Referenced by: '<S1>/Memory14'
+   */
+  0U,
+
+  /* Computed Parameter: Memory15_InitialCondition
+   * Referenced by: '<S1>/Memory15'
    */
   0U,
 
@@ -207,13 +262,28 @@ P_MySimplifiedTestingModel_2_T MySimplifiedTestingModel_2_P = {
    */
   0U,
 
+  /* Computed Parameter: Memory21_InitialCondition
+   * Referenced by: '<S1>/Memory21'
+   */
+  0U,
+
   /* Computed Parameter: Memory9_InitialCondition
    * Referenced by: '<S1>/Memory9'
    */
   0U,
 
+  /* Computed Parameter: Memory19_InitialCondition
+   * Referenced by: '<S1>/Memory19'
+   */
+  0U,
+
   /* Computed Parameter: Memory6_InitialCondition
    * Referenced by: '<S1>/Memory6'
+   */
+  0U,
+
+  /* Computed Parameter: Memory18_InitialCondition
+   * Referenced by: '<S1>/Memory18'
    */
   0U,
 
@@ -229,11 +299,6 @@ P_MySimplifiedTestingModel_2_T MySimplifiedTestingModel_2_P = {
 
   /* Computed Parameter: BegrenzungArbeitstemperatur1_Lo
    * Referenced by: '<S1>/Begrenzung Arbeitstemperatur1'
-   */
-  0U,
-
-  /* Computed Parameter: Constant15_Value
-   * Referenced by: '<S1>/Constant15'
    */
   0U,
 

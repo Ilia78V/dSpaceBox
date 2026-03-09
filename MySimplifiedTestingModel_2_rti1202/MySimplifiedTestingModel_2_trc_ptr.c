@@ -5,7 +5,7 @@
    Definition of function that initializes the global TRC pointers
 
    RTI1202 23.1 (02-May-2023)
-   Thu Feb 19 09:49:32 2026
+   Mon Mar  9 09:58:22 2026
 
    Copyright 2026, dSPACE GmbH. All rights reserved.
 
@@ -49,9 +49,11 @@ volatile int32_T *p_1_MySimplifiedTestingModel_2_int32_T_1 = NULL;
 volatile uint32_T *p_1_MySimplifiedTestingModel_2_uint32_T_2 = NULL;
 volatile boolean_T *p_1_MySimplifiedTestingModel_2_boolean_T_3 = NULL;
 volatile uint8_T *p_1_MySimplifiedTestingModel_2_uint8_T_4 = NULL;
-volatile uint16_T *p_2_MySimplifiedTestingModel_2_uint16_T_0 = NULL;
-volatile uint8_T *p_2_MySimplifiedTestingModel_2_uint8_T_1 = NULL;
-volatile boolean_T *p_2_MySimplifiedTestingModel_2_boolean_T_2 = NULL;
+volatile real_T *p_2_MySimplifiedTestingModel_2_real_T_0 = NULL;
+volatile int32_T *p_2_MySimplifiedTestingModel_2_int32_T_2 = NULL;
+volatile uint16_T *p_2_MySimplifiedTestingModel_2_uint16_T_3 = NULL;
+volatile uint8_T *p_2_MySimplifiedTestingModel_2_uint8_T_4 = NULL;
+volatile boolean_T *p_2_MySimplifiedTestingModel_2_boolean_T_5 = NULL;
 
 /*
  *  Declare the functions, that initially assign TRC pointers
@@ -68,7 +70,7 @@ static void rti_init_trc_pointers_0(void)
   p_0_MySimplifiedTestingModel_2_int32_T_2 =
     &MySimplifiedTestingModel_2_B.SFunction1_o3;
   p_0_MySimplifiedTestingModel_2_uint16_T_3 =
-    &MySimplifiedTestingModel_2_B.debug_command[0];
+    &MySimplifiedTestingModel_2_B.Cast1[0];
   p_0_MySimplifiedTestingModel_2_uint8_T_4 =
     &MySimplifiedTestingModel_2_B.Memory3[0];
   p_0_MySimplifiedTestingModel_2_boolean_T_5 =
@@ -82,12 +84,16 @@ static void rti_init_trc_pointers_0(void)
   p_1_MySimplifiedTestingModel_2_boolean_T_3 =
     &MySimplifiedTestingModel_2_P.Memory_InitialCondition;
   p_1_MySimplifiedTestingModel_2_uint8_T_4 =
-    &MySimplifiedTestingModel_2_P.Constant12_Value;
-  p_2_MySimplifiedTestingModel_2_uint16_T_0 =
+    &MySimplifiedTestingModel_2_P.Memory3_InitialCondition;
+  p_2_MySimplifiedTestingModel_2_real_T_0 =
+    &MySimplifiedTestingModel_2_DW.Memory20_PreviousInput;
+  p_2_MySimplifiedTestingModel_2_int32_T_2 =
+    &MySimplifiedTestingModel_2_DW.MultiportSwitch_DIMS1[0];
+  p_2_MySimplifiedTestingModel_2_uint16_T_3 =
     &MySimplifiedTestingModel_2_DW.comm_err_count;
-  p_2_MySimplifiedTestingModel_2_uint8_T_1 =
+  p_2_MySimplifiedTestingModel_2_uint8_T_4 =
     &MySimplifiedTestingModel_2_DW.Memory3_PreviousInput[0];
-  p_2_MySimplifiedTestingModel_2_boolean_T_2 =
+  p_2_MySimplifiedTestingModel_2_boolean_T_5 =
     &MySimplifiedTestingModel_2_DW.Memory_PreviousInput;
 }
 

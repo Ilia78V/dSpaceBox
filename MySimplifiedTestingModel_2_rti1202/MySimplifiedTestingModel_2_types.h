@@ -7,9 +7,9 @@
  *
  * Code generation for model "MySimplifiedTestingModel_2".
  *
- * Model version              : 1.99
+ * Model version              : 1.104
  * Simulink Coder version : 9.9 (R2023a) 19-Nov-2022
- * C source code generated on : Thu Feb 19 09:49:32 2026
+ * C source code generated on : Mon Mar  9 09:58:22 2026
  *
  * Target selection: rti1202.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -63,6 +63,24 @@ struct tag_bhlIbNdlacbARFmQL4oHlC
 typedef struct tag_bhlIbNdlacbARFmQL4oHlC cell_0_MySimplifiedTestingMod_T;
 
 #endif                             /* typedef_cell_0_MySimplifiedTestingMod_T */
+
+#ifndef struct_emxArray_uint8_T_1x127
+#define struct_emxArray_uint8_T_1x127
+
+struct emxArray_uint8_T_1x127
+{
+  uint8_T data[127];
+  int32_T size[2];
+};
+
+#endif                                 /* struct_emxArray_uint8_T_1x127 */
+
+#ifndef typedef_emxArray_uint8_T_1x127_MySimp_T
+#define typedef_emxArray_uint8_T_1x127_MySimp_T
+
+typedef struct emxArray_uint8_T_1x127 emxArray_uint8_T_1x127_MySimp_T;
+
+#endif                             /* typedef_emxArray_uint8_T_1x127_MySimp_T */
 
 /* Parameters (default storage) */
 typedef struct P_MySimplifiedTestingModel_2_T_ P_MySimplifiedTestingModel_2_T;

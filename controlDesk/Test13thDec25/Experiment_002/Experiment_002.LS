@@ -2,7 +2,7 @@
 <Root>
 	<ProjectExperiment>
 		<window>
-			<RelativeDocumentPlacement type="key">~H4sIAAAAAAAEAO1Z3W7aMBS+n7R3iLJdMsrv2koUqQ3dhlQKKqztrZOctBbGjmyHNr3ivXaxF+Bd9gpzElJBCeCgttOkXCAZw/fl+Pg73zHmz6/frVvJ0RA4RgQ/ATemwAVm9MSsliumgXyfYAfJeKbDnPEFClkge4iiO+Bm++MHw2j5nPnAZWhQNIET81PyneuEyDSwoAEhJ6bkAZjGQSbm8zq3wo0hTGFTRALYGMI64Skh7MEKhGQT/BTHb7Y9RAS0DtJvbkCeU2QTuMG0XrPYxFdYGxMsQ7MdRbIT/o0wBaF3KtJgAlRajEqEaRRpOvWDCanN02MuKCiIsWT+TlRXwkRkp66ZpiobVX25Ucscz8h1rIpMchb2qUWYUPFa95i4HDamO4ujz7FKy2KXlG6kkhzRQqbCjbZsCAQcCe4I2QMljS514dFsf6lqEcV66XB0lyfuGBRvVB5UV5w6Ek8hD2Z5nVENDLEMknxl7nUlrbMdbBFDl3pMc++z1vJTAO+ApxTubqiQGKezyFHow6Uame2kxL9zFqxLPgs5QEpxMsZm2s02lMVIpBuVibz4JNYrxuRSvLWMgLOmMkqw9g9LcHchVQpxv4640zawl7x15PZWSr9hfKzkdcoB7S/y+p4i73W6F8xZ9IhKSU+NCjRUpxqzfYkuS+qVW45pFz5jAXVF/OCS7sOzePqeJ0DqLyA5xqiyhm3629KWtEH/WeFuZRoxRkbYz6Pw9fIcIAp6h5Dl8txeI69fmStmUh5gGlmV0X9QB85oSVFzmJ4/+hyEKN/6XjnaJhVfeQVnGh3wQdk8dcLBgj9BD0OharZ8phIKKFdDSdLRpao1xQ+Kd3U+O3Tms0b9q4cO3fp8VnPnM8ex7WTUqFQhGR01a4uRXfFqgCo2NI6P1Iw3n+UvPuUCy/WbxwtUC7SQn0haLmdkKLlKY3pS0Ttj7suk6ayNwlkLZy2ctXDWfZ1Vz8Xey1kt5ocG84zXc9jdjJpO2yyctnDawmkLp93XafV+tb+3076d4+7hvDuvunuIBojEvuLGOhdniF9j8Xxdr3fdP7xf+MwNpi57EF06QmJsI655338FQjIOycr6cTJEOSZMglp8vjBNDVVnEe4U9yL48oBhqhyz1ixVm8cvYl952zpY/d+n/RflrC1CCxoAAA==</RelativeDocumentPlacement>
+			<RelativeDocumentPlacement type="key">~H4sIAAAAAAAEAO1Z3W7aMBS+n7R3iLJdTSzld20litTCfpBKQYW1vTXJSWth7Mh2aNMr3msXewHeZa8w56+CEsBBbadJuUAKJt+X4+PvfMcxf379bt5IjobAMSL4EbgxAy4woydmxSqbBvI8gm0ko5EOsyfnKGC+7CGKboGbrffvDKPpceYBl4FB0RROzA/xPVcxkWlgQX1CTkzJfTCNg0zMx3VuhZtAkMJmiPiwMYR1wlNC2H3bF5JN8WMUv9lyERHQPEjv3ID8StGYwDWmtWqbTT2FHWOCZWC2wkh2wr8RpiD0VkXqT4HKNqMSYRpGmg79YEJq8/SYAwoKYiKZtxPVlTAV2alrpKnKRlWeL9QyxxNyHasik5wFfdomTKh423eYOBw2pjuLo8+xSkuySko3UkmOaCFT4YZLNgQCtgRnhMYDJY0udeDBbH2uaBFFeulwdJsn7ggULVQeVFec2hLPIA9meZ5hDQyx9ON8Za51Oa2zHWwhQ5e6THPts+byUwDvgKsU7myokAinM8lR4MGFujJbcYl/58xfl3wWcoCU4mSEzbSbbag2I6FuVCby4uNYLxmTS/FWMwLOGsooweo/LMHdhVQuxP0y4k7bwF7y1pHbayn9mvGJktcpB7S/yGt7irzX6Z4zO+kR5ZKeGhVoqHY1ZusCXZTUJ7cc0y58xnzqiOjBJd2HZ/H0XVeA1J9AvI1RZQ3b9LelLWmD/rPC3co0YoyMsJdH4evlOUAU9DYhy+W5vUZevjJXzMQaYBpaldG/VxvOcEphc5h9ffA4CGHdeK4VLpOKz1rBmUYHPFA2T+1gkPDH6GEgVM1aZyqhgHI1lDgdXapaU/SgaFUX80N7Ma/Xvrjo0Kkt5lVnMbft8Ti+qpcrEF8dNarJ1bjsVgGVx1A/PlIj7mKev/iUCyzXbx4vUC2wjbxY0nI5I0PJVRrTnUrlkxbb3lSa3lovvLXw1sJbC2/d11v13pXfylvbzAsM5hqJMb6Axe5m1HTaRuG0hdMWTls47b5Oq/fe/tZO+3qOu4fz7jzs7iHqIxL5ihPpXJwhfoXF04G93oH/8C7xmWtMHXYvunSExGSMuOaJ/yUIyTjEM+tHyRBWRBgHlfyemKaGqrMId4o7Cd4aMExleOx9dNwoVRrHz8Jf+do8WP3zp/UXneWMKxAaAAA=</RelativeDocumentPlacement>
 		</window>
 		<viewflags>
 			<Name type="key">Experiment_002.CDE</Name>
@@ -42,11 +42,7 @@
 						<ViewFlags type="key">1</ViewFlags>
 						<item>
 							<Name type="key">mysimplifiedtestingmodel_2.sdf</Name>
-							<ViewFlags type="key">1</ViewFlags>
-							<item>
-								<Name type="key">mysimplifiedtestingmodel_2.vdp</Name>
-								<ViewFlags type="key">1</ViewFlags>
-							</item>
+							<ViewFlags type="key">5</ViewFlags>
 							<item>
 								<Name type="key">.metadata</Name>
 								<ViewFlags type="key">1</ViewFlags>
@@ -145,6 +141,7 @@
 		<OpenSignalGenerators Version="1"/>
 		<Documents Version="1"/>
 	</SignalEditor>
+	<PythonScriptComponent/>
 	<Instrumentation>
 		<Layouts Version="3">
 			<Layout1>
@@ -158,8 +155,4 @@
 			</Layout3>
 		</Layouts>
 	</Instrumentation>
-	<PythonScriptComponent/>
-	<XILAPIEESPort>
-		<ErrorConfigurationDocuments Version="1"/>
-	</XILAPIEESPort>
 </Root>

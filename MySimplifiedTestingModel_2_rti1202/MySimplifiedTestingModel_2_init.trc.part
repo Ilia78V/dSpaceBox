@@ -2,12 +2,17 @@
 
 
 -- Type definitions for arrays
+typedef MySimplifiedTestingModel_2_ArrayDT0_1_2_Col col flt(64,IEEE)[1][2]
+typedef MySimplifiedTestingModel_2_ArrayDT5_1_2_Col col uint(16)[1][2]
 typedef MySimplifiedTestingModel_2_ArrayDT5_1_8_Col col uint(16)[1][8]
 typedef MySimplifiedTestingModel_2_ArrayDT3_1_127_Col col uint(8)[1][127]
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_4_Col col uint(8)[1][4]
 typedef MySimplifiedTestingModel_2_ArrayDT3_127 uint(8)[127]
-typedef MySimplifiedTestingModel_2_ArrayDT3_1_64_Col col uint(8)[1][64]
 typedef MySimplifiedTestingModel_2_ArrayDT3_1_2_Col col uint(8)[1][2]
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_32_Col col uint(8)[1][32]
 typedef MySimplifiedTestingModel_2_ArrayDT8_8 uint(8)[8]
+typedef MySimplifiedTestingModel_2_ArrayDT6_2 int(32)[2]
+typedef MySimplifiedTestingModel_2_ArrayDT3_4 uint(8)[4]
 typedef MySimplifiedTestingModel_2_ArrayDT3_256 uint(8)[256]
 
 

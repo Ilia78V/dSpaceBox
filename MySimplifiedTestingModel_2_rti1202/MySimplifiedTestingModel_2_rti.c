@@ -6,7 +6,7 @@
    the hardware and software interrupts used.
 
    RTI1202 23.1 (02-May-2023)
-   Thu Feb 19 09:49:32 2026
+   Mon Mar  9 09:58:22 2026
 
    Copyright 2026, dSPACE GmbH. All rights reserved.
 
@@ -168,13 +168,8 @@ static void rti_mdl_background(void)
   DsDaq_Background(0);
 }
 
-__INLINE void rti_mdl_sample_input(void)
-{
-  /* Calls for base sample time: [0.001, 0] */
-  /* dSPACE I/O Board DS1202SER #1 Unit:GENSER Group:STATUS */
-  dsser_status_read(rtiDS1202SER_B1_Ser[0],(DSSER_STATUS_LSR|DSSER_STATUS_MSR|
-    DSSER_STATUS_IIR_FCR));
-}
+/* Function rti_mdl_sample_input() is empty */
+#define rti_mdl_sample_input()
 
 static void rti_mdl_daq_service()
 {

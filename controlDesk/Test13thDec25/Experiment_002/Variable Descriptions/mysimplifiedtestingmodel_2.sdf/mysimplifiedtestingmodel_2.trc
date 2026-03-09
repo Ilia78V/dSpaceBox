@@ -3,9 +3,9 @@
 --  Trace file: MySimplifiedTestingModel_2.trc
 --
 --  RTI1202 23.1 (02-May-2023)
---  Wed Dec 10 14:02:29 2025
+--  Mon Mar  9 09:58:22 2026
 --
---  Copyright 2025, dSPACE GmbH. All rights reserved.
+--  Copyright 2026, dSPACE GmbH. All rights reserved.
 --
 -- ****************************************************************************
 --
@@ -26,7 +26,7 @@
 
 _author      "RTI1202 23.1 (02-May-2023)"
 _description ""
-_gendate     "12/10/2025 02:02:34"
+_gendate     "03/09/2026 09:58:32"
 _genname     "RTI"
 _genversion  "23.1"
 _model       "MySimplifiedTestingModel_2"
@@ -40,17 +40,33 @@ sampling_period[0]
     value:     0.001
 }
 
+typedef MySimplifiedTestingModel_2_ArrayDT0_1_2_Col col float(64,IEEE) [1][2]
+
+typedef MySimplifiedTestingModel_2_ArrayDT5_1_2_Col col uint(16) [1][2]
+
+typedef MySimplifiedTestingModel_2_ArrayDT5_1_8_Col col uint(16) [1][8]
+
 typedef MySimplifiedTestingModel_2_ArrayDT3_1_127_Col col uint(8) [1][127]
+
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_4_Col col uint(8) [1][4]
 
 typedef MySimplifiedTestingModel_2_ArrayDT3_127 uint(8) [127]
 
-typedef MySimplifiedTestingModel_2_ArrayDT3_1_64_Col col uint(8) [1][64]
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_2_Col col uint(8) [1][2]
+
+typedef MySimplifiedTestingModel_2_ArrayDT3_1_32_Col col uint(8) [1][32]
 
 typedef MySimplifiedTestingModel_2_ArrayDT8_8 uint(8) [8]
 
+typedef MySimplifiedTestingModel_2_ArrayDT6_2 int(32) [2]
+
+typedef MySimplifiedTestingModel_2_ArrayDT3_4 uint(8) [4]
+
+typedef MySimplifiedTestingModel_2_ArrayDT3_256 uint(8) [256]
+
 currentTime
 {
-    addr:  0x48046ed0
+    addr:  0x48049c28
     alias: "currentTime"
     desc:  "Current simulation time. Increments with execution of Timer Task 1."
     flags: READONLY
@@ -60,7 +76,7 @@ currentTime
 
 p_msg_last_error_no
 {
-    addr:  0x48045038
+    addr:  0x48047298
     alias: "errorNumber"
     desc:  "Error number of last error message (zero if no error)."
     flags: READONLY
@@ -70,7 +86,7 @@ p_msg_last_error_no
 
 finalTime
 {
-    addr:  0x48046ed4
+    addr:  0x48049c2c
     alias: "finalTime"
     desc:  "Simulation stop time. When reached, simState switches to STOP."
     flags: READONLY
@@ -80,7 +96,7 @@ finalTime
 
 modelStepSize
 {
-    addr:  0x48046ed8
+    addr:  0x48049c30
     alias: "modelStepSize"
     desc:  "Fixed step size of the model, sample time of Timer Task 1."
     flags: READONLY
@@ -90,7 +106,7 @@ modelStepSize
 
 simState
 {
-    addr:  0x48046200
+    addr:  0x480489c8
     alias: "simState"
     desc:  "Simulation state: STOP=0 RUN=2"
     type:  int(32)
@@ -99,7 +115,7 @@ simState
 
 p_dsts_sum_of_reset_time
 {
-    addr:  0x48045034
+    addr:  0x48047294
     alias: "sumOfResetTime"
     desc:  "Internal variable for summing up reset time."
     flags: HIDDEN|READONLY
@@ -111,30 +127,45 @@ group "Model Root"
 
     group "RS485"
 
+        group "Active"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[0]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
         group "Begrenzung Arbeitstemperatur1"
         {
             block: "Saturate"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[12]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[17]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "LowerLimit"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[389]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[651]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[11]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[16]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "UpperLimit"
                 flags: PARAM
                 type:  uint(8)*
@@ -147,25 +178,25 @@ group "Model Root"
             block: "Saturate"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[14]
+            p_1_MySimplifiedTestingModel_2_real_T_0[16]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "LowerLimit"
                 flags: PARAM
                 type:  float(64,IEEE)*
             }
 
-            p_0_MySimplifiedTestingModel_2_real_T_0[1]
+            p_0_MySimplifiedTestingModel_2_real_T_0[2]
             {
-                addr:  0x48046e6c
+                addr:  0x48049bb4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  float(64,IEEE)*
             }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[13]
+            p_1_MySimplifiedTestingModel_2_real_T_0[15]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "UpperLimit"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -175,9 +206,9 @@ group "Model Root"
 
         group "BUS MASTER FSM"
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[44]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[49]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "grant_THERMO"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -185,9 +216,9 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[42]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[47]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "grant_ZKDM"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -195,41 +226,41 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[974]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1470]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "resp_data"
                 flags: OUTPUT|READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[1101]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1597]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "resp_err_THERMO"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[973]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1469]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "resp_err_ZKDM"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[1102]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1598]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "resp_len"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[45]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[50]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "resp_ok_THERMO"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -237,9 +268,9 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[43]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[48]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "resp_ok_ZKDM"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -247,25 +278,25 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[845]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1341]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "TX_Data"
                 flags: OUTPUT|READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[972]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1468]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "TX_Len"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[41]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[46]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "TX_Trigger"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -275,14 +306,29 @@ group "Model Root"
 
         endgroup
 
+        group "Byte Pack"
+        {
+            block: "S-Function"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint16_T_3[2]
+            {
+                addr:  0x48049bc0
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(16)*
+            }
+
+        endgroup
+
         group "Cast"
         {
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[257]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[779]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
@@ -295,9 +341,9 @@ group "Model Root"
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[3]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[3]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -312,9 +358,9 @@ group "Model Root"
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[0]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[0]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -324,14 +370,44 @@ group "Model Root"
 
         endgroup
 
+        group "Cast To Boolean10"
+        {
+            block: "DataTypeConversion"
+        }
+
+            p_0_MySimplifiedTestingModel_2_real_T_0[4]
+            {
+                addr:  0x48049bb4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "Cast To Boolean11"
+        {
+            block: "DataTypeConversion"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[391]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+        endgroup
+
         group "Cast To Boolean2"
         {
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[32]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[37]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -346,9 +422,9 @@ group "Model Root"
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[33]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[5]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -363,9 +439,9 @@ group "Model Root"
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[34]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[38]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -380,9 +456,9 @@ group "Model Root"
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[4]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[4]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -397,9 +473,9 @@ group "Model Root"
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[30]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[11]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -414,9 +490,9 @@ group "Model Root"
             block: "DataTypeConversion"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[31]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[12]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -426,14 +502,76 @@ group "Model Root"
 
         endgroup
 
+        group "Cast To Boolean8"
+        {
+            block: "DataTypeConversion"
+        }
+
+            p_0_MySimplifiedTestingModel_2_real_T_0[1]
+            {
+                addr:  0x48049bb4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "Cast To Boolean9"
+        {
+            block: "DataTypeConversion"
+        }
+
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[8]
+            {
+                addr:    0x48049bc8
+                alias:   "Out1"
+                bitmask: 0x1
+                flags:   OUTPUT|READONLY
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+        endgroup
+
+        group "Cast To Double"
+        {
+            block: "DataTypeConversion"
+        }
+
+            p_0_MySimplifiedTestingModel_2_real_T_0[5]
+            {
+                addr:  0x48049bb4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT0_1_2_Col*
+            }
+
+        endgroup
+
+        group "Cast1"
+        {
+            block: "DataTypeConversion"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint16_T_3[0]
+            {
+                addr:  0x48049bc0
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT5_1_2_Col*
+            }
+
+        endgroup
+
         group "Clock"
         {
             block: "Clock"
         }
 
-            p_0_MySimplifiedTestingModel_2_real_T_0[0]
+            p_0_MySimplifiedTestingModel_2_real_T_0[3]
             {
-                addr:  0x48046e6c
+                addr:  0x48049bb4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  float(64,IEEE)*
@@ -446,9 +584,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[2]
+            p_1_MySimplifiedTestingModel_2_real_T_0[8]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -461,9 +599,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[6]
+            p_1_MySimplifiedTestingModel_2_real_T_0[24]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -476,9 +614,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[20]
+            p_1_MySimplifiedTestingModel_2_real_T_0[7]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -491,9 +629,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[12]
+            p_1_MySimplifiedTestingModel_2_real_T_0[14]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -506,12 +644,12 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[0]
+            p_1_MySimplifiedTestingModel_2_real_T_0[18]
             {
-                addr:  0x48046e90
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
-                type:  uint(8)*
+                type:  float(64,IEEE)*
             }
 
         endgroup
@@ -521,24 +659,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[15]
+            p_1_MySimplifiedTestingModel_2_real_T_0[17]
             {
-                addr:  0x48046e80
-                alias: "Value"
-                flags: PARAM
-                type:  float(64,IEEE)*
-            }
-
-        endgroup
-
-        group "Constant14"
-        {
-            block: "Constant"
-        }
-
-            p_1_MySimplifiedTestingModel_2_real_T_0[16]
-            {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -551,9 +674,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[13]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[3]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "Value"
                 flags: PARAM
                 type:  uint(8)*
@@ -566,47 +689,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[3]
-            {
-                addr:  0x48046e80
-                alias: "Value"
-                flags: PARAM
-                type:  float(64,IEEE)*
-            }
-
-        endgroup
-
-        group "Constant17"
-        {
-            block: "Constant"
-        }
-
             p_1_MySimplifiedTestingModel_2_real_T_0[5]
             {
-                addr:  0x48046e80
-                alias: "Value"
-                flags: PARAM
-                type:  float(64,IEEE)*
-            }
-
-        endgroup
-
-        group "Constant18"
-        {
-            block: "Constant"
-        }
-
-            p_0_MySimplifiedTestingModel_2_real_T_0[2]
-            {
-                addr:  0x48046e6c
-                alias: "Out1"
-                flags: OUTPUT|READONLY
-                type:  float(64,IEEE)*
-            }
-
-            p_1_MySimplifiedTestingModel_2_real_T_0[22]
-            {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -621,40 +706,10 @@ group "Model Root"
 
             p_1_MySimplifiedTestingModel_2_uint32_T_2[1]
             {
-                addr:  0x48046e88
+                addr:  0x48049bd4
                 alias: "Value"
                 flags: PARAM
                 type:  uint(32)*
-            }
-
-        endgroup
-
-        group "Constant3"
-        {
-            block: "Constant"
-        }
-
-            p_1_MySimplifiedTestingModel_2_real_T_0[0]
-            {
-                addr:  0x48046e80
-                alias: "Value"
-                flags: PARAM
-                type:  float(64,IEEE)*
-            }
-
-        endgroup
-
-        group "Constant4"
-        {
-            block: "Constant"
-        }
-
-            p_1_MySimplifiedTestingModel_2_real_T_0[1]
-            {
-                addr:  0x48046e80
-                alias: "Value"
-                flags: PARAM
-                type:  float(64,IEEE)*
             }
 
         endgroup
@@ -664,9 +719,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[19]
+            p_1_MySimplifiedTestingModel_2_real_T_0[26]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -679,17 +734,17 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[455]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[780]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[14]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[18]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "Value"
                 flags: PARAM
                 type:  uint(8)*
@@ -702,17 +757,17 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[456]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[781]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[15]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[19]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "Value"
                 flags: PARAM
                 type:  uint(8)*
@@ -725,40 +780,17 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[457]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[782]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[16]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[20]
             {
-                addr:  0x48046e90
-                alias: "Value"
-                flags: PARAM
-                type:  uint(8)*
-            }
-
-        endgroup
-
-        group "Constant9"
-        {
-            block: "Constant"
-        }
-
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[458]
-            {
-                addr:  0x48046e78
-                alias: "Out1"
-                flags: OUTPUT|READONLY
-                type:  uint(8)*
-            }
-
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[17]
-            {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "Value"
                 flags: PARAM
                 type:  uint(8)*
@@ -771,9 +803,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[10]
+            p_1_MySimplifiedTestingModel_2_real_T_0[12]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -786,9 +818,54 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[11]
+            p_1_MySimplifiedTestingModel_2_real_T_0[13]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "ConstantSwitch12"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[6]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "ConstantSwitch13"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[20]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "ConstantSwitch14"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[21]
+            {
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -801,9 +878,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[21]
+            p_1_MySimplifiedTestingModel_2_real_T_0[27]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -816,9 +893,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[7]
+            p_1_MySimplifiedTestingModel_2_real_T_0[9]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -831,9 +908,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[8]
+            p_1_MySimplifiedTestingModel_2_real_T_0[10]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -846,9 +923,9 @@ group "Model Root"
             block: "Constant"
         }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[9]
+            p_1_MySimplifiedTestingModel_2_real_T_0[11]
             {
-                addr:  0x48046e80
+                addr:  0x48049bcc
                 alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
@@ -858,12 +935,20 @@ group "Model Root"
 
         group "Create 8-Bytes Command"
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[654]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1214]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "command"
                 flags: OUTPUT|READONLY
-                type:  MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint16_T_3[11]
+            {
+                addr:  0x48049bc0
+                alias: "pcd2"
+                flags: OUTPUT|READONLY
+                type:  uint(16)*
             }
 
         endgroup
@@ -873,9 +958,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[36]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[40]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -890,9 +975,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[37]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[41]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -907,9 +992,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[42]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[47]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -924,9 +1009,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[43]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[48]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -941,9 +1026,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[973]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1469]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "In1"
                 flags: READONLY
                 type:  uint(8)*
@@ -956,9 +1041,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[974]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1470]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "In1"
                 flags: READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
@@ -971,9 +1056,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[1102]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1598]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "In1"
                 flags: READONLY
                 type:  uint(8)*
@@ -986,12 +1071,12 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[654]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1214]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "In1"
                 flags: READONLY
-                type:  MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
             }
 
         endgroup
@@ -1001,9 +1086,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[845]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1341]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "In1"
                 flags: READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
@@ -1016,9 +1101,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[972]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1468]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "In1"
                 flags: READONLY
                 type:  uint(8)*
@@ -1031,9 +1116,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[41]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[46]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -1048,12 +1133,12 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[390]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[129]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "In1"
                 flags: READONLY
-                type:  MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
             }
 
         endgroup
@@ -1063,9 +1148,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[39]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[43]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -1080,9 +1165,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[40]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[44]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -1097,12 +1182,102 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_real_T_0[3]
+            p_0_MySimplifiedTestingModel_2_real_T_0[8]
             {
-                addr:  0x48046e6c
+                addr:  0x48049bb4
                 alias: "In1"
                 flags: READONLY
                 type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "Display29"
+        {
+            block: "Display"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint16_T_3[11]
+            {
+                addr:  0x48049bc0
+                alias: "In1"
+                flags: READONLY
+                type:  uint(16)*
+            }
+
+        endgroup
+
+        group "Display30"
+        {
+            block: "Display"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint16_T_3[3]
+            {
+                addr:  0x48049bc0
+                alias: "In1"
+                flags: READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT5_1_8_Col*
+            }
+
+        endgroup
+
+        group "Display31"
+        {
+            block: "Display"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[915]
+            {
+                addr:  0x48049bc4
+                alias: "In1"
+                flags: READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_2_Col*
+            }
+
+        endgroup
+
+        group "Display32"
+        {
+            block: "Display"
+        }
+
+            p_0_MySimplifiedTestingModel_2_real_T_0[5]
+            {
+                addr:  0x48049bb4
+                alias: "In1"
+                flags: READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT0_1_2_Col*
+            }
+
+        endgroup
+
+        group "Display33"
+        {
+            block: "Display"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint16_T_3[2]
+            {
+                addr:  0x48049bc0
+                alias: "In1"
+                flags: READONLY
+                type:  uint(16)*
+            }
+
+        endgroup
+
+        group "Display34"
+        {
+            block: "Display"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[256]
+            {
+                addr:  0x48049bc4
+                alias: "In1"
+                flags: READONLY
+                type:  uint(8)*
             }
 
         endgroup
@@ -1112,9 +1287,9 @@ group "Model Root"
             block: "Display"
         }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[38]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[42]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "In1"
                 bitmask: 0x1
                 flags:   READONLY
@@ -1128,23 +1303,24 @@ group "Model Root"
 
             p_0_MySimplifiedTestingModel_2_uint32_T_1[0]
             {
-                addr:  0x48046e70
+                addr:  0x48049bb8
                 alias: "NumRXBytes"
                 flags: OUTPUT|READONLY
                 type:  uint(32)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[130]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[652]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "RXBytes"
+                desc:  "No data (unused channel) "
                 flags: OUTPUT|READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_127*
             }
 
             p_0_MySimplifiedTestingModel_2_int32_T_2[0]
             {
-                addr:  0x48046e74
+                addr:  0x48049bbc
                 alias: "Status"
                 desc:  "No data (unused channel) "
                 flags: OUTPUT|READONLY
@@ -1163,9 +1339,9 @@ group "Model Root"
 
         group "DS1202SER_STAT_C1"
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[21]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[29]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Interrupt"
                 bitmask: 0x1
                 desc:    "No data (unused channel) "
@@ -1174,19 +1350,20 @@ group "Model Root"
                 type:    MySimplifiedTestingModel_2_ArrayDT8_8*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[5]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[13]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Line"
                 bitmask: 0x1
+                desc:    "No data (unused channel) "
                 flags:   OUTPUT|READONLY
                 range:   < 0 ; 1 >
                 type:    MySimplifiedTestingModel_2_ArrayDT8_8*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[13]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[21]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Modem"
                 bitmask: 0x1
                 desc:    "No data (unused channel) "
@@ -1197,14 +1374,107 @@ group "Model Root"
 
         endgroup
 
+        group "Invalid CTW"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[4]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "Invalid CTW1"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[19]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "Length"
+        {
+            block: "Constant"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[783]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[21]
+            {
+                addr:  0x48049bdc
+                alias: "Value"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+        endgroup
+
+        group "MATLAB Function"
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1212]
+            {
+                addr:  0x48049bc4
+                alias: "y"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_2_Col*
+            }
+
+        endgroup
+
+        group "MATLAB Function1"
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1179]
+            {
+                addr:  0x48049bc4
+                alias: "telegram"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_32_Col*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1211]
+            {
+                addr:  0x48049bc4
+                alias: "telegramLen"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+        endgroup
+
         group "MATLAB Function4"
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[590]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1178]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
+                alias: "length"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1051]
+            {
+                addr:  0x48049bc4
                 alias: "u"
                 flags: OUTPUT|READONLY
-                type:  MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
             }
 
         endgroup
@@ -1216,7 +1486,7 @@ group "Model Root"
 
             p_1_MySimplifiedTestingModel_2_boolean_T_3[0]
             {
-                addr:    0x48046e8c
+                addr:    0x48049bd8
                 alias:   "InitialCondition"
                 bitmask: 0x1
                 flags:   PARAM
@@ -1224,9 +1494,9 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[1]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[1]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1243,7 +1513,7 @@ group "Model Root"
 
             p_1_MySimplifiedTestingModel_2_boolean_T_3[1]
             {
-                addr:    0x48046e8c
+                addr:    0x48049bd8
                 alias:   "InitialCondition"
                 bitmask: 0x1
                 flags:   PARAM
@@ -1251,9 +1521,9 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[2]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[2]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1268,20 +1538,239 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[7]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[9]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[259]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[392]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
+            }
+
+        endgroup
+
+        group "Memory11"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_boolean_T_3[4]
+            {
+                addr:    0x48049bd8
+                alias:   "InitialCondition"
+                bitmask: 0x1
+                flags:   PARAM
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[9]
+            {
+                addr:    0x48049bc8
+                alias:   "Out1"
+                bitmask: 0x1
+                flags:   OUTPUT|READONLY
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+        endgroup
+
+        group "Memory12"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_boolean_T_3[5]
+            {
+                addr:    0x48049bd8
+                alias:   "InitialCondition"
+                bitmask: 0x1
+                flags:   PARAM
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[10]
+            {
+                addr:    0x48049bc8
+                alias:   "Out1"
+                bitmask: 0x1
+                flags:   OUTPUT|READONLY
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+        endgroup
+
+        group "Memory13"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[6]
+            {
+                addr:  0x48049bdc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[262]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+        endgroup
+
+        group "Memory14"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[7]
+            {
+                addr:  0x48049bdc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[263]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+            }
+
+        endgroup
+
+        group "Memory15"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[8]
+            {
+                addr:  0x48049bdc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[390]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+        endgroup
+
+        group "Memory16"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_boolean_T_3[3]
+            {
+                addr:    0x48049bd8
+                alias:   "InitialCondition"
+                bitmask: 0x1
+                flags:   PARAM
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[7]
+            {
+                addr:    0x48049bc8
+                alias:   "Out1"
+                bitmask: 0x1
+                flags:   OUTPUT|READONLY
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+        endgroup
+
+        group "Memory17"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[4]
+            {
+                addr:  0x48049bdc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[257]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_4_Col*
+            }
+
+        endgroup
+
+        group "Memory18"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[14]
+            {
+                addr:  0x48049bdc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[649]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+        endgroup
+
+        group "Memory19"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[12]
+            {
+                addr:  0x48049bdc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[395]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
             }
 
         endgroup
@@ -1291,17 +1780,63 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[4]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[1]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[128]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[127]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+        endgroup
+
+        group "Memory20"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[28]
+            {
+                addr:  0x48049bcc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  float(64,IEEE)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_real_T_0[7]
+            {
+                addr:  0x48049bb4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "Memory21"
+        {
+            block: "Memory"
+        }
+
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[10]
+            {
+                addr:  0x48049bdc
+                alias: "InitialCondition"
+                flags: PARAM
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[393]
+            {
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
@@ -1314,17 +1849,17 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[3]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[0]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[1]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[0]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
@@ -1337,17 +1872,17 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[5]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[2]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[129]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[128]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
@@ -1362,7 +1897,7 @@ group "Model Root"
 
             p_1_MySimplifiedTestingModel_2_boolean_T_3[2]
             {
-                addr:    0x48046e8c
+                addr:    0x48049bd8
                 alias:   "InitialCondition"
                 bitmask: 0x1
                 flags:   PARAM
@@ -1370,9 +1905,9 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[29]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[6]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "Out1"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1387,17 +1922,17 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[9]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[13]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[261]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[522]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
@@ -1410,17 +1945,17 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[10]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[15]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[388]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[650]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
@@ -1433,17 +1968,17 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[6]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[5]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[258]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[261]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
@@ -1456,20 +1991,65 @@ group "Model Root"
             block: "Memory"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[8]
+            p_1_MySimplifiedTestingModel_2_uint8_T_4[11]
             {
-                addr:  0x48046e90
+                addr:  0x48049bdc
                 alias: "InitialCondition"
                 flags: PARAM
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[260]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[394]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
+            }
+
+        endgroup
+
+        group "Multiport\nSwitch"
+        {
+            block: "MultiPortSwitch"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[129]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+            }
+
+        endgroup
+
+        group "Multiport\nSwitch1"
+        {
+            block: "MultiPortSwitch"
+        }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[256]
+            {
+                addr:  0x48049bc4
+                alias: "Out1"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+        endgroup
+
+        group "RX on"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[23]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
             }
 
         endgroup
@@ -1479,28 +2059,43 @@ group "Model Root"
             block: "Saturate"
         }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[2]
+            p_1_MySimplifiedTestingModel_2_real_T_0[3]
             {
-                addr:  0x48046e90
+                addr:  0x48049bcc
                 alias: "LowerLimit"
                 flags: PARAM
-                type:  uint(8)*
+                type:  float(64,IEEE)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[0]
+            p_0_MySimplifiedTestingModel_2_real_T_0[0]
             {
-                addr:  0x48046e78
+                addr:  0x48049bb4
                 alias: "Out1"
                 flags: OUTPUT|READONLY
-                type:  uint(8)*
+                type:  float(64,IEEE)*
             }
 
-            p_1_MySimplifiedTestingModel_2_uint8_T_4[1]
+            p_1_MySimplifiedTestingModel_2_real_T_0[2]
             {
-                addr:  0x48046e90
+                addr:  0x48049bcc
                 alias: "UpperLimit"
                 flags: PARAM
-                type:  uint(8)*
+                type:  float(64,IEEE)*
+            }
+
+        endgroup
+
+        group "Setpoint"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[1]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
+                flags: PARAM
+                type:  float(64,IEEE)*
             }
 
         endgroup
@@ -1509,7 +2104,7 @@ group "Model Root"
 
             p_0_MySimplifiedTestingModel_2_int32_T_2[1]
             {
-                addr:  0x48046e74
+                addr:  0x48049bbc
                 alias: "Status"
                 desc:  "No data (unused channel) "
                 flags: OUTPUT|READONLY
@@ -1523,7 +2118,7 @@ group "Model Root"
 
                 p_0_MySimplifiedTestingModel_2_uint32_T_1[1]
                 {
-                    addr:  0x48046e70
+                    addr:  0x48049bb8
                     alias: "Out1"
                     flags: OUTPUT|READONLY
                     type:  uint(32)*
@@ -1535,7 +2130,7 @@ group "Model Root"
 
                 p_0_MySimplifiedTestingModel_2_int32_T_2[1]
                 {
-                    addr:  0x48046e74
+                    addr:  0x48049bbc
                     alias: "Status"
                     desc:  "No data (unused channel) "
                     flags: OUTPUT|READONLY
@@ -1551,7 +2146,7 @@ group "Model Root"
 
                 p_0_MySimplifiedTestingModel_2_uint32_T_1[2]
                 {
-                    addr:  0x48046e70
+                    addr:  0x48049bb8
                     alias: "Out1"
                     flags: OUTPUT|READONLY
                     type:  uint(32)*
@@ -1561,46 +2156,69 @@ group "Model Root"
 
         endgroup
 
-        group "Switch"
-        {
-            block: "Switch"
-        }
+        group "THERMO FSM"
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[390]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1045]
             {
-                addr:  0x48046e78
-                alias: "Out1"
+                addr:  0x48049bc4
+                alias: "expect_addr"
                 flags: OUTPUT|READONLY
-                type:  MySimplifiedTestingModel_2_ArrayDT3_1_64_Col*
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_4_Col*
             }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[17]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1050]
             {
-                addr:  0x48046e80
-                alias: "Threshold"
-                flags: PARAM
-                type:  float(64,IEEE)*
-            }
-
-        endgroup
-
-        group "Switch1"
-        {
-            block: "Switch"
-        }
-
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[454]
-            {
-                addr:  0x48046e78
-                alias: "Out1"
+                addr:  0x48049bc4
+                alias: "expect_crc_kind"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_1_MySimplifiedTestingModel_2_real_T_0[18]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1049]
             {
-                addr:  0x48046e80
-                alias: "Threshold"
+                addr:  0x48049bc4
+                alias: "expect_len"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[917]
+            {
+                addr:  0x48049bc4
+                alias: "req_bytes"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[1044]
+            {
+                addr:  0x48049bc4
+                alias: "req_len"
+                flags: OUTPUT|READONLY
+                type:  uint(8)*
+            }
+
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[45]
+            {
+                addr:    0x48049bc8
+                alias:   "req_valid"
+                bitmask: 0x1
+                flags:   OUTPUT|READONLY
+                range:   < 0 ; 1 >
+                type:    uint(8)*
+            }
+
+        endgroup
+
+        group "TX on"
+        {
+            block: "Constant"
+        }
+
+            p_1_MySimplifiedTestingModel_2_real_T_0[22]
+            {
+                addr:  0x48049bcc
+                alias: "Value"
                 flags: PARAM
                 type:  float(64,IEEE)*
             }
@@ -1609,9 +2227,9 @@ group "Model Root"
 
         group "ZKDM FSM"
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[40]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[44]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "bus_ctrl_active"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1619,33 +2237,49 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[587]
+            p_0_MySimplifiedTestingModel_2_uint16_T_3[3]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc0
+                alias: "debug_command"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT5_1_8_Col*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[915]
+            {
+                addr:  0x48049bc4
+                alias: "debug_pcd2"
+                flags: OUTPUT|READONLY
+                type:  MySimplifiedTestingModel_2_ArrayDT3_1_2_Col*
+            }
+
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[912]
+            {
+                addr:  0x48049bc4
                 alias: "expect_addr_ZKDM"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[588]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[913]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "expect_crc_kind_ZKDM"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[589]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[914]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "expect_len_ZKDM"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[36]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[40]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "fault_no_trip"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1653,9 +2287,9 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[37]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[41]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "fault_trip"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1663,17 +2297,17 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_real_T_0[3]
+            p_0_MySimplifiedTestingModel_2_real_T_0[8]
             {
-                addr:  0x48046e6c
+                addr:  0x48049bb4
                 alias: "freq_rel"
                 flags: OUTPUT|READONLY
                 type:  float(64,IEEE)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[38]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[42]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "fu_ctrl_ready"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1681,9 +2315,9 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[39]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[43]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "fu_ready"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1691,25 +2325,25 @@ group "Model Root"
                 type:    uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[459]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[784]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "req_bytes"
                 flags: OUTPUT|READONLY
                 type:  MySimplifiedTestingModel_2_ArrayDT3_1_127_Col*
             }
 
-            p_0_MySimplifiedTestingModel_2_uint8_T_3[586]
+            p_0_MySimplifiedTestingModel_2_uint8_T_4[911]
             {
-                addr:  0x48046e78
+                addr:  0x48049bc4
                 alias: "req_len"
                 flags: OUTPUT|READONLY
                 type:  uint(8)*
             }
 
-            p_0_MySimplifiedTestingModel_2_boolean_T_4[35]
+            p_0_MySimplifiedTestingModel_2_boolean_T_5[39]
             {
-                addr:    0x48046e7c
+                addr:    0x48049bc8
                 alias:   "req_valid"
                 bitmask: 0x1
                 flags:   OUTPUT|READONLY
@@ -1741,7 +2375,7 @@ group "Task Info"
 
         pRti_TIMERA_OType
         {
-            addr:  0x48046ef8
+            addr:  0x48049c50
             alias: "overrunCheckType"
             flags: READONLY
             type:  int(32)*
@@ -1749,7 +2383,7 @@ group "Task Info"
 
         pRti_TIMERA_OCnt
         {
-            addr:  0x48046f04
+            addr:  0x48049c5c
             alias: "overrunCount"
             flags: READONLY
             type:  int(32)*
@@ -1757,7 +2391,7 @@ group "Task Info"
 
         pRti_TIMERA_ORpt
         {
-            addr:  0x48046f00
+            addr:  0x48049c58
             alias: "overrunQueueCount"
             flags: READONLY
             type:  int(32)*
@@ -1765,7 +2399,7 @@ group "Task Info"
 
         pRti_TIMERA_OMax
         {
-            addr:  0x48046efc
+            addr:  0x48049c54
             alias: "overrunQueueMax"
             flags: READONLY
             type:  int(32)*
@@ -1773,7 +2407,7 @@ group "Task Info"
 
         pRti_TIMERA_Prio
         {
-            addr:  0x48046f0c
+            addr:  0x48049c64
             alias: "priority"
             flags: READONLY
             type:  int(32)*
@@ -1781,7 +2415,7 @@ group "Task Info"
 
         pRti_TIMERA_STime
         {
-            addr:  0x48046eec
+            addr:  0x48049c44
             alias: "sampleTime"
             flags: READONLY
             type:  float(64,IEEE)*
@@ -1789,7 +2423,7 @@ group "Task Info"
 
         pRti_TIMERA_TState
         {
-            addr:  0x48046ef4
+            addr:  0x48049c4c
             alias: "state"
             flags: READONLY
             type:  int(32)*
@@ -1797,7 +2431,7 @@ group "Task Info"
 
         pRti_TIMERA_TCnt
         {
-            addr:  0x48046f08
+            addr:  0x48049c60
             alias: "taskCallCount"
             flags: READONLY
             type:  float(64,IEEE)*
@@ -1805,7 +2439,7 @@ group "Task Info"
 
         pRti_TIMERA_TTime
         {
-            addr:  0x48046ef0
+            addr:  0x48049c48
             alias: "turnaroundTime"
             flags: READONLY
             type:  float(64,IEEE)*
@@ -1825,7 +2459,7 @@ group "XIL API"
 
         p_xilapi_eesport_activeerrorset_uint32_T
         {
-            addr:  0x4804621c
+            addr:  0x480489e4
             alias: "Active ErrorSet"
             desc:  "Index of active ErrorSet or 0 if no ErrorSet is active."
             flags: OUTPUT|READONLY
@@ -1835,7 +2469,7 @@ group "XIL API"
 
         p_xilapi_eesport_erroractivated_uint32_T
         {
-            addr:  0x48046218
+            addr:  0x480489e0
             alias: "Error Activated"
             desc:  "0 - no error is activated on hardware, 1 - at least one error is activated on hardware."
             flags: OUTPUT|READONLY
@@ -1845,7 +2479,7 @@ group "XIL API"
 
         p_xilapi_eesport_errorswitching_uint32_T
         {
-            addr:  0x48046214
+            addr:  0x480489dc
             alias: "Error Switching"
             desc:  "0 - no switching operation running on hardware, 1 -  switching operation running on hardware."
             flags: OUTPUT|READONLY
@@ -1855,7 +2489,7 @@ group "XIL API"
 
         xilapi_eesport_flags_uint32_T
         {
-            addr:  0x48046f1c
+            addr:  0x48049c74
             alias: "Flags"
             flags: OUTPUT|READONLY
             range: < 0 ; 4294967295 >
@@ -1864,7 +2498,7 @@ group "XIL API"
 
         xilapi_eesport_trigger_uint32_T
         {
-            addr:  0x48046f18
+            addr:  0x48049c70
             alias: "Trigger"
             flags: OUTPUT|READONLY
             range: < 0 ; 4294967295 >

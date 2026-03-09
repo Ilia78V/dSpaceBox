@@ -5,7 +5,7 @@
    Declaration of function that initializes the global TRC pointers
 
    RTI1202 23.1 (02-May-2023)
-   Thu Feb 19 09:49:32 2026
+   Mon Mar  9 09:58:22 2026
 
    Copyright 2026, dSPACE GmbH. All rights reserved.
 
@@ -40,9 +40,11 @@ EXTERN_C volatile int32_T *p_1_MySimplifiedTestingModel_2_int32_T_1;
 EXTERN_C volatile uint32_T *p_1_MySimplifiedTestingModel_2_uint32_T_2;
 EXTERN_C volatile boolean_T *p_1_MySimplifiedTestingModel_2_boolean_T_3;
 EXTERN_C volatile uint8_T *p_1_MySimplifiedTestingModel_2_uint8_T_4;
-EXTERN_C volatile uint16_T *p_2_MySimplifiedTestingModel_2_uint16_T_0;
-EXTERN_C volatile uint8_T *p_2_MySimplifiedTestingModel_2_uint8_T_1;
-EXTERN_C volatile boolean_T *p_2_MySimplifiedTestingModel_2_boolean_T_2;
+EXTERN_C volatile real_T *p_2_MySimplifiedTestingModel_2_real_T_0;
+EXTERN_C volatile int32_T *p_2_MySimplifiedTestingModel_2_int32_T_2;
+EXTERN_C volatile uint16_T *p_2_MySimplifiedTestingModel_2_uint16_T_3;
+EXTERN_C volatile uint8_T *p_2_MySimplifiedTestingModel_2_uint8_T_4;
+EXTERN_C volatile boolean_T *p_2_MySimplifiedTestingModel_2_boolean_T_5;
 
 /*
  *  Declare the general function for TRC pointer initialization
