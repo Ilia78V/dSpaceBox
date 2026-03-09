@@ -198,13 +198,15 @@
 	<DiagnosticsManagement/>
 	<Instrumentation Version="1">
 		<UniqueIds Version="3">
-			<Count type="key">3</Count>
+			<Count type="key">4</Count>
 			<File1 type="key">Experiment_002/Layout1</File1>
 			<Id1 type="key">0</Id1>
 			<File2 type="key">Experiment_002/Copy of Layout1</File2>
 			<Id2 type="key">1</Id2>
 			<File3 type="key">Experiment_002/Copy of Copy of Layout1</File3>
 			<Id3 type="key">2</Id3>
+			<File4 type="key">Experiment_002/Copy of Layout1 (1)</File4>
+			<Id4 type="key">3</Id4>
 		</UniqueIds>
 	</Instrumentation>
 	<VariablesManagement/>

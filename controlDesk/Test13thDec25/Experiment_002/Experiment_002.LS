@@ -2,7 +2,7 @@
 <Root>
 	<ProjectExperiment>
 		<window>
-			<RelativeDocumentPlacement type="key">~H4sIAAAAAAAEAO1Z3W7aMBS+n7R3iLJdTSzld20litTCfpBKQYW1vTXJSWth7Mh2aNMr3msXewHeZa8w56+CEsBBbadJuUAKJt+X4+PvfMcxf379bt5IjobAMSL4EbgxAy4woydmxSqbBvI8gm0ko5EOsyfnKGC+7CGKboGbrffvDKPpceYBl4FB0RROzA/xPVcxkWlgQX1CTkzJfTCNg0zMx3VuhZtAkMJmiPiwMYR1wlNC2H3bF5JN8WMUv9lyERHQPEjv3ID8StGYwDWmtWqbTT2FHWOCZWC2wkh2wr8RpiD0VkXqT4HKNqMSYRpGmg79YEJq8/SYAwoKYiKZtxPVlTAV2alrpKnKRlWeL9QyxxNyHasik5wFfdomTKh423eYOBw2pjuLo8+xSkuySko3UkmOaCFT4YZLNgQCtgRnhMYDJY0udeDBbH2uaBFFeulwdJsn7ggULVQeVFec2hLPIA9meZ5hDQyx9ON8Za51Oa2zHWwhQ5e6THPts+byUwDvgKsU7myokAinM8lR4MGFujJbcYl/58xfl3wWcoCU4mSEzbSbbag2I6FuVCby4uNYLxmTS/FWMwLOGsooweo/LMHdhVQuxP0y4k7bwF7y1pHbayn9mvGJktcpB7S/yGt7irzX6Z4zO+kR5ZKeGhVoqHY1ZusCXZTUJ7cc0y58xnzqiOjBJd2HZ/H0XVeA1J9AvI1RZQ3b9LelLWmD/rPC3co0YoyMsJdH4evlOUAU9DYhy+W5vUZevjJXzMQaYBpaldG/VxvOcEphc5h9ffA4CGHdeK4VLpOKz1rBmUYHPFA2T+1gkPDH6GEgVM1aZyqhgHI1lDgdXapaU/SgaFUX80N7Ma/Xvrjo0Kkt5lVnMbft8Ti+qpcrEF8dNarJ1bjsVgGVx1A/PlIj7mKev/iUCyzXbx4vUC2wjbxY0nI5I0PJVRrTnUrlkxbb3lSa3lovvLXw1sJbC2/d11v13pXfylvbzAsM5hqJMb6Axe5m1HTaRuG0hdMWTls47b5Oq/fe/tZO+3qOu4fz7jzs7iHqIxL5ihPpXJwhfoXF04G93oH/8C7xmWtMHXYvunSExGSMuOaJ/yUIyTjEM+tHyRBWRBgHlfyemKaGqrMId4o7Cd4aMExleOx9dNwoVRrHz8Jf+do8WP3zp/UXneWMKxAaAAA=</RelativeDocumentPlacement>
+			<RelativeDocumentPlacement type="key">~H4sIAAAAAAAEAO1Z3W7aSBS+X6nvYLl7sStRgvlpEylBSkx2g5QEFGjT28E+TkYMM9bMmNS5QnmtvdgX4F32FXbssVMoDowRVdOKCyTj8H1z5pzvfGc0+e+ff48/S44GwDEi+BG4NQUuMKMntlOt2RYKQ4I9JNM3HeaNL1HMInmFKLoDbrff/GZZxyFnIXAZWxRN4MR+q3/zSRPZFhY0IuTEljwC2zooxPy+yq1wY4hz2BSRCF4MYZXwlBD24EZCsgl+TOO32wEiAo4P8l++gDynaETgFtNG3WWTUGFHmGAZ2+0kko3wvwhTEHqnIo0mQKXLqESYJpHmry6YkMY8V8wHBQUxlizciOpKmIji1LXyVBWjnG8LtcjxjFzFqsgkZ3GPuoQJFa97j4nP4cV0F3H0OFZpyap0wTh+TJJGjLC5dJOiDYCAJ8EfolFfiaNLffhit985RkSpYjoc3ZWJPAWlpSqD6opTT+IplMEs7jPpggGWkc5YYbVreadtYEsYujRghtUv2stHAbwDgdK4/0KPpDiTTQ7jEK7Vk93WTf43Z9Gq6IuQfaQ0J1NsoeGsQ7mMJLpRmSiL17HeMCYX4q0XBFz0qqAJ6z+wCTc3Um0v7t2IOx8EW8nbRG7fS+m3jI+VvE45oO1F3thS5Fed7iXzsilRq5ipUYEG6lxjt6/RdUV9Sssxn8NnLKK+SBeumC5exNMLAgHSfAP6IKPaGtbpb81YMgb9ZI27lmnIGBnisIzCV9uzjyiYHUIW23N9j+y+M5fMpNrHNLEqq/egjpzJlpLhMD3/EnIQovo5DKpJmVR81SWcbXUgBGXz1Iv7Gb9GD2KherZ6phIKqNRA0enoUjWa0oXSqs5nH7z5rNl4H6APfmM+q/vzmeeNRvqpWXNAPx226tnTqBbUAdVG0Dw6VG+C+ax88ykXWOzfMl6gRqCLQi1puZiRgeQqjflJxeyMuS2TobM2t3TWvd/t/W7vd6/W7xqvyu9cFsYWC6zMraw/nD934H1mrIY+2NrSB/UVgNLLkC2rxdxUfg0rTXLwve03BV1gv0xw6Rr6PO8cOc1K0zncW30Zq9fttTf6HRi9P+ifuufzp09YRM+VnT/pDAOfP32dBNdoiu+QZDyp3S2mPnvYjRd/XcJ6XmMHZmxIu3obvel6+gpRlavUkvxUhOIMcZXA5yt2syv6wX1mNzqXokuHSIxHiBve0d+AUDsCXapemglRTQl1UNnfM781kFwR4UblZcFX+wxTmVxTHx61Kk7r6Jvwl74eHyz/u6b9PxSixkvCGQAA</RelativeDocumentPlacement>
 		</window>
 		<viewflags>
 			<Name type="key">Experiment_002.CDE</Name>
@@ -33,6 +33,10 @@
 						<Name type="key">Copy of Copy of Layout1.lay</Name>
 						<ViewFlags type="key">1</ViewFlags>
 					</item>
+					<item>
+						<Name type="key">Copy of Layout1 (1).lay</Name>
+						<ViewFlags type="key">1</ViewFlags>
+					</item>
 				</item>
 				<item>
 					<Name type="key">Hardware Configurations</Name>
@@ -43,6 +47,10 @@
 						<item>
 							<Name type="key">mysimplifiedtestingmodel_2.sdf</Name>
 							<ViewFlags type="key">5</ViewFlags>
+							<item>
+								<Name type="key">mysimplifiedtestingmodel_2.vdp</Name>
+								<ViewFlags type="key">1</ViewFlags>
+							</item>
 							<item>
 								<Name type="key">.metadata</Name>
 								<ViewFlags type="key">1</ViewFlags>
@@ -141,18 +149,24 @@
 		<OpenSignalGenerators Version="1"/>
 		<Documents Version="1"/>
 	</SignalEditor>
-	<PythonScriptComponent/>
 	<Instrumentation>
 		<Layouts Version="3">
 			<Layout1>
 				<Data type="key">Layout1.lay|1|436fa7d3-ccbb-401e-852e-b0f2ea0be498/0|2:d</Data>
 			</Layout1>
 			<Layout2>
-				<Data type="key">Copy of Layout1.lay|1|436fa7d3-ccbb-401e-852e-b0f2ea0be498/1|2:d</Data>
+				<Data type="key">Copy of Layout1 (1).lay|1|436fa7d3-ccbb-401e-852e-b0f2ea0be498/3|2:d</Data>
 			</Layout2>
 			<Layout3>
-				<Data type="key">Copy of Copy of Layout1.lay|1|436fa7d3-ccbb-401e-852e-b0f2ea0be498/2|2:d</Data>
+				<Data type="key">Copy of Copy of Layout1.lay|0|436fa7d3-ccbb-401e-852e-b0f2ea0be498/2|2:d</Data>
 			</Layout3>
+			<Layout4>
+				<Data type="key">Copy of Layout1.lay|0|436fa7d3-ccbb-401e-852e-b0f2ea0be498/1|2:d</Data>
+			</Layout4>
 		</Layouts>
 	</Instrumentation>
+	<PythonScriptComponent/>
+	<XILAPIEESPort>
+		<ErrorConfigurationDocuments Version="1"/>
+	</XILAPIEESPort>
 </Root>

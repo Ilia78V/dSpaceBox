@@ -100,7 +100,7 @@
 					<Name type="key">Copy of Layout1.lay</Name>
 					<DisplayName type="key">Copy of Layout1.lay</DisplayName>
 					<Path type="key">.\Experiment Layouts</Path>
-					<Flags type="key">16448</Flags>
+					<Flags type="key">17472</Flags>
 					<Type type="key">10</Type>
 					<UniqueID type="key">455313355</UniqueID>
 					<EntityID type="key">{A6780079-93D8-4CC3-8CC4-B9E11D22C6DE}</EntityID>
@@ -115,11 +115,26 @@
 					<Name type="key">Copy of Copy of Layout1.lay</Name>
 					<DisplayName type="key">Copy of Copy of Layout1.lay</DisplayName>
 					<Path type="key">.\Experiment Layouts</Path>
-					<Flags type="key">16448</Flags>
+					<Flags type="key">17472</Flags>
 					<Type type="key">10</Type>
 					<UniqueID type="key">608372750</UniqueID>
 					<EntityID type="key">{1852E1F1-1454-473C-82B0-12B9005BE712}</EntityID>
 					<ItemInfoDate type="key">2025-12-08 15:47:31</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">ej62ixyv</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">Instrumentation</Component>
+					<Name type="key">Copy of Layout1 (1).lay</Name>
+					<DisplayName type="key">Copy of Layout1 (1).lay</DisplayName>
+					<Path type="key">.\Experiment Layouts</Path>
+					<Flags type="key">16448</Flags>
+					<Type type="key">10</Type>
+					<UniqueID type="key">851292138</UniqueID>
+					<EntityID type="key">{1E7F6314-4A99-4EF1-8A89-296175D2677F}</EntityID>
+					<ItemInfoDate type="key">2026-03-09 10:07:32</ItemInfoDate>
 					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
 					<ItemInfoDescr type="key"/>
 					<ItemInfoAddInfoDb type="key"/>
@@ -786,7 +801,23 @@
 		<SortAscending type="key">-1</SortAscending>
 		<SignalList>
 			<Variable>
+				<Name type="key">Model Root/RS485/BUS MASTER FSM/grant_THERMO</Name>
+				<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
+				<Active type="key">-1</Active>
+				<Signal>
+					<Raster type="key">HostService</Raster>
+				</Signal>
+			</Variable>
+			<Variable>
 				<Name type="key">Model Root/RS485/BUS MASTER FSM/grant_ZKDM</Name>
+				<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
+				<Active type="key">-1</Active>
+				<Signal>
+					<Raster type="key">HostService</Raster>
+				</Signal>
+			</Variable>
+			<Variable>
+				<Name type="key">Model Root/RS485/BUS MASTER FSM/resp_ok_THERMO</Name>
 				<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
 				<Active type="key">-1</Active>
 				<Signal>
@@ -803,6 +834,14 @@
 			</Variable>
 			<Variable>
 				<Name type="key">Model Root/RS485/BUS MASTER FSM/TX_Trigger</Name>
+				<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
+				<Active type="key">-1</Active>
+				<Signal>
+					<Raster type="key">HostService</Raster>
+				</Signal>
+			</Variable>
+			<Variable>
+				<Name type="key">Model Root/RS485/THERMO FSM/req_valid</Name>
 				<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
 				<Active type="key">-1</Active>
 				<Signal>
@@ -968,7 +1007,25 @@
 				</StorageInformation>
 				<SignalList>
 					<Variable>
+						<Name type="key">Model Root/RS485/BUS MASTER FSM/grant_THERMO</Name>
+						<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
+						<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+						<Recorded type="key">-1</Recorded>
+						<Signal>
+							<Raster type="key">HostService</Raster>
+						</Signal>
+					</Variable>
+					<Variable>
 						<Name type="key">Model Root/RS485/BUS MASTER FSM/grant_ZKDM</Name>
+						<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
+						<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+						<Recorded type="key">-1</Recorded>
+						<Signal>
+							<Raster type="key">HostService</Raster>
+						</Signal>
+					</Variable>
+					<Variable>
+						<Name type="key">Model Root/RS485/BUS MASTER FSM/resp_ok_THERMO</Name>
 						<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
 						<PlatformDisplayName type="key">Platform</PlatformDisplayName>
 						<Recorded type="key">-1</Recorded>
@@ -987,6 +1044,15 @@
 					</Variable>
 					<Variable>
 						<Name type="key">Model Root/RS485/BUS MASTER FSM/TX_Trigger</Name>
+						<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
+						<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+						<Recorded type="key">-1</Recorded>
+						<Signal>
+							<Raster type="key">HostService</Raster>
+						</Signal>
+					</Variable>
+					<Variable>
+						<Name type="key">Model Root/RS485/THERMO FSM/req_valid</Name>
 						<Platform type="key">99fbc569-a333-4b9a-8435-68b6e4c1cd9c</Platform>
 						<PlatformDisplayName type="key">Platform</PlatformDisplayName>
 						<Recorded type="key">-1</Recorded>
